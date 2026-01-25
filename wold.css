@@ -109,7 +109,7 @@ input:hover {
     height: 0;
     position: relative;
     top: -10vh;
-    left: -15vw;
+    left: -7vw;
 }
    
 button {
@@ -278,4 +278,5 @@ h4 {
     top: -30vh;
     left: -5vw;
 }
+
 
