@@ -105,9 +105,11 @@ input:hover {
     transform: rotatex(10deg);
     animation: rotateAngle 6s linear infinite;
     margin: auto;
-    width: auto;
+    width: 0;
+    height: 0;
     position: relative;
     top: -10vh;
+    left: -15vw;
 }
    
 button {
@@ -276,3 +278,4 @@ h4 {
     top: -30vh;
     left: -5vw;
 }
+
