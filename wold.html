@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="wold.css">
+  <link rel="stylesheet" href="sumahou.css">
+</head>
+
+<body>
+
+  <div class="login">
+    <center>
+      <h2 class="h2">login</h2>
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <div class="wrapper">
+        <button onclick="login()" >
+          Login
+        </button>
+      </div>
+      <div id="message" style="color:red; "></div>
+    </center>
+  </div>
+
+  <div class="atarimae">
+    <h2>Free login</h2>
+    <h4>email : free@gmail.com</h4>
+    <h4>password : free</h4>
+  </div>
+
+
+
+  <!-- เรียกใช้ไฟล์ users.js ก่อน main login script -->
+  <script src="users.js"></script>
+  <script>
+    function login() {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const messageDiv = document.getElementById("message");
+
+      if (!email || !password) {
+        messageDiv.textContent = "กรุณากรอก Email และ Password ให้ครบ";
+        return;
+      }
+
+      const user = users.find(u => u.email === email);
+
+      if (!user) {
+        messageDiv.textContent = "ไม่พบ Email ในระบบ";
+      } else if (user.password !== password) {
+        messageDiv.textContent = "รหัสผ่านไม่ถูกต้อง";
+      } else {
+        sessionStorage.setItem("userId", user.id);
+        sessionStorage.setItem("userName", user.name);
+        window.location.href = "login.html";
+      }
+    }
+  </script>
+</body>
+
+</html>

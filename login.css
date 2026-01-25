@@ -1,0 +1,236 @@
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+}
+
+.home {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  margin: 10px;
+  border-radius: 50px;
+  background: linear-gradient(45deg,#01ff83 2%,#010ec7 95%);
+  transition: height 0.3s ease;
+  transition: width 0.9s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 99999;
+}
+
+.home:hover {
+  width: 13vw;
+  height: 95vh;
+  border-radius: 50px;
+  background: linear-gradient(45deg,#01ff83 2%,#010ec7 95%);
+}
+
+.sidebar {
+  width: 100px;
+  border-radius: 50%;
+  background: none;
+  padding: 0;
+  height: 100px;
+  transition: height 0.3s ease,width 0.9s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.sidebar:hover {
+  width: 15vw;
+  height: 105vh;
+  border-radius: 50px;
+}
+
+/* 🟢 ปุ่มหลัก */
+.m {
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  opacity: 0; 
+  transform: translateY(-200px);
+  transition: 0.3s ease;
+  position: absolute; /* ← ให้หลุดออกจาก flow */
+  top: 0;
+  left: 15px;
+  z-index: 9999; /* ← อยู่หน้าสุดแน่นอน */
+}
+
+.m:hover {
+  z-index: 10000; /* ← ยิ่ง hover ยิ่งอยู่ข้างบน */
+  animation: buttos 1s 1 forwards;
+}
+
+/* ทำให้ปุ่มในแต่ละเมนูแสดงตามลำดับ */
+.sidebar:hover #menu1 {opacity:1;transform:translateY(3.1vh);}
+.sidebar:hover #menu2 {opacity:1;transform:translateY(12.2vh);}
+.sidebar:hover #menu3 {opacity:1;transform:translateY(21.3vh);}
+.sidebar:hover #menu4 {opacity:1;transform:translateY(30.4vh);}
+.sidebar:hover #menu5 {opacity:1;transform:translateY(39.5vh);}
+.sidebar:hover #menu6 {opacity:1;transform:translateY(48.6vh);}
+.sidebar:hover #menu7 {opacity:1;transform:translateY(57.7vh);}
+.sidebar:hover #menu8 {opacity:1;transform:translateY(66.8vh);}
+.sidebar:hover #menu9 {opacity:1;transform:translateY(75.9vh);}
+.sidebar:hover #menu10 {opacity:1;transform:translateY(85vh);}
+
+.m span {
+  white-space: nowrap;
+  opacity: 0; 
+  transform: translateX(-20px);
+  transition: 0.3s ease;
+}
+
+.m:hover span {
+  opacity: 1;
+}
+
+
+span:hover {
+  width: 150px;
+  height: 71px;
+  position: relative;
+  top: 5px;
+  border-radius: 15px;
+  animation: na 1s 1 forwards;
+}
+
+
+
+@keyframes na {
+  0% { opacity: 0; }
+  30% { opacity: 0; }
+  50% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes buttos {
+  0% { width: 50px; height: 50px; border-radius: 50%; }
+  50% { width: 60px; height: 50px; border-radius: 15px; }
+  100% { width: 150px; height: 71px; border-radius: 15px; }
+}
+
+.background {
+  width: 100vw;
+  height: auto;
+  background: linear-gradient(135.8934deg,#d8f0fc 12.345%,#ffd8bd 98.765%);
+  z-index: 0;
+  position: relative;
+}
+
+
+.wolk {
+  position: relative;
+  z-index: 990;
+}
+
+
+
+
+.m1 {
+  display: block;
+  width: 101px;
+  height: 35px;
+  border: 2px solid black;
+  top: calc(100vh - 32px);
+  left: calc(100vw - 202.5px);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #01ff83;
+  transition: height 0.3s ease;
+  transition: width 0.9s ease;
+  transition: border-radius 0.5s ease;
+  transition: top 0.15s ease;
+  overflow: hidden;
+}
+
+.m11 {
+  width: 100px;
+  height: 30px;
+  background-color: #000000;
+  top: calc(100vh - 30px);
+  left: calc(100vw - 200px);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #FEFEFE;
+  transition: height 0.3s ease;
+  transition: width 0.9s ease;
+  transition: border-radius 0.5s ease;
+  transition: top 0.15s ease;
+  overflow: hidden;
+}
+
+.m2,.m3 {
+  position: fixed;
+  z-index: 99998; /* ⭐ อยู่บนสุด */
+  width: 0vw;
+}
+.m1 {
+  position: fixed;
+  z-index: 99998;
+}
+
+.m11 {
+  position: fixed;
+  z-index: 100000; /* ⭐ ปุ่มอยู่เหนือ .m1 อีกที */
+}
+
+.m11:hover,
+.m1:hover {
+  width: 150px;
+  height: 50px;
+  border-radius: 30vw;
+  top: calc(100vh - 60px);
+  left: calc(100vw - 220px);
+}
+
+.m12,.m13 {
+  width: 5vw;
+  height: 5vw;
+  background-color: #01ff83;
+  border-radius: 50%;
+  position: relative;
+  left: 70vw;
+  overflow: hidden;
+  transition: height 1.5s ease,left 2s ease,width 2s ease,border-radius 1s ease;
+  border: 1px solid black;
+  z-index: 80;
+}
+.m12 {
+  left: 80vw;
+}
+
+
+.m12:hover {
+  width: 7vw;
+  height: 6vw;
+  border-radius: 50px;
+  left:80vw;
+  border: 2px solid rgb(167, 75, 0);
+  font-size: 32px;
+}
+
+.m13:hover {
+  width: 7vw;
+  height: 6vw;
+  border-radius: 50px;
+  left:70vw;
+  border: 2px solid rgb(0, 198, 212);
+  font-size: 40px;
+}
+

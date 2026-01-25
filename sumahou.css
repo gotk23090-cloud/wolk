@@ -1,0 +1,50 @@
+@media (min-width:360px) and (max-width:1200px) {
+    body {
+        height:100vh;
+
+    }
+    .login {
+        width: 90vw;
+        height: 90vw;
+        position: relative;
+        left: 5vw;
+    }
+    input {
+        width: 70vw;
+        height: 10vw;
+        left: 0vw;
+        top: 0vw;
+        font-size: 3vw;
+    }
+    #email {
+        top: 1vw;
+    }
+    .h2 {
+        top: 0vw;
+        left: 0vw;
+    }
+    h2 {
+        font-size: 9vw;
+    }
+    button {
+        width: 30vw;
+        height: 10vw;
+        left: 0vw;
+        top: 18vw;
+        font-size: 4vw;
+    }
+    .atarimae {
+        top: -90vw;
+        left: 5vw;
+        width: 90vw;
+        height: 40vw;;
+    }
+    h4 {
+        font-size: 6vw;
+    }
+    #message {
+        top: 0vw;
+        left: 0vw;
+        font-size: 5vw;
+    }
+}

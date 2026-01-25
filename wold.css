@@ -1,0 +1,278 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: auto;
+    background: linear-gradient(0deg,#e25d3b88 10%,#84109b85 50%,#0d2de49d 70%);
+}
+
+
+.login {
+    display: block;
+    width: 36.3vw;        /* 500px */
+    height: 36.3vw;       /* 500px (คงสัดส่วนเดิม) */
+    background: linear-gradient(37.62deg,#06ff0f 10%,#5Df0FF 70%);
+    position: relative;
+    border-radius: 10%;
+    border: 2px solid;
+    top: calc(50vh - 18.15vw);   /* 250px */
+    left: calc(50vw - 18.15vw);  /* 250px */
+    box-shadow: 0.9vw 0.9vw 2.3vw black; /* 10 10 25 */
+}
+
+center {
+    display: inline-block;
+    height: 30vh;
+}
+
+input {
+    width: 27.8vw;      /* 300px */
+    height: 6.6vh;      /* 50px */
+    border-top-right-radius: 4.6vh;
+    border-top-left-radius: 1.4vh;
+    border-bottom-left-radius: 4.6vh;
+    border-bottom-right-radius: 1.4vh;
+    display: block;
+    position: relative;
+    margin: 9.3vw;      /* 100px */
+    top: -15.65vh;       /* -20px */
+    text-align: center;
+    box-shadow: 0.46vw 0.93vw 1.4vw rgb(2, 34, 1);
+    left: -5vw;
+}
+
+input:hover {
+    animation: inputs 2.5s linear infinite;
+}
+
+@keyframes inputs {
+    0% {
+        transform: rotate(0deg);
+    } 
+    10% {
+        transform: rotate(1deg);
+    }  
+    20% {
+        transform: rotate(3deg);
+    }  
+    25% {
+        transform: rotate(4deg);
+    }  
+    30% {
+        transform: rotate(3deg);
+    } 
+    40% {
+        transform: rotate(1deg);
+    }  
+    50% {
+        transform: rotate(0deg);
+    }     
+    60% {
+        transform: rotate(-1deg);
+    }  
+    70% {
+        transform: rotate(-3deg);
+    }  
+    75% {
+        transform: rotate(-4deg);
+    }  
+    80% {
+        transform: rotate(-3deg);
+    } 
+    90% {
+        transform: rotate(-1deg);
+    }   
+    100% {
+        transform: rotate(0deg);
+    }  
+}
+#email {
+    position: relative;
+    top: -4.6vh;   /* 50px */
+}
+
+.h2 {
+    display: block;
+    position: relative;
+    top: 4.6vh;   /* 50px */
+    left: -5vw;
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+.wrapper {
+    perspective: 46.3vw;        /* 500px */
+    transform: rotatex(10deg);
+    animation: rotateAngle 6s linear infinite;
+    margin: auto;
+    width: auto;
+    position: relative;
+    top: -10vh;
+}
+   
+button {
+    display: block;
+    position: relative;
+    margin: 0.5em 0;            /* em ไม่ต้องแปลง */
+    padding: 0.8em 2.2em;       /* em ไม่ต้องแปลง */
+    cursor: pointer;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 0.4em;       /* em ไม่ต้องแปลง */
+    text-transform: uppercase;
+    font-size: 1.76vw;          /* 19px */
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    mix-blend-mode: color-dodge;
+    perspective: 46.3vw;        /* 500px */
+    transform-style: preserve-3d;
+    top: -20vh;
+    left: -5vw;
+}
+   
+button:before,
+button:after {
+    --z: 0px;                   /* ตัวแปรนี้ปล่อยไว้ */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    mix-blend-mode: inherit;
+    border-radius: inherit;
+    transform-style: preserve-3d;
+    transform: translate3d(
+        calc(var(--z) * 0vw),
+        calc(var(--z) * 0vw),
+        calc(var(--z) * 0vw)
+    );
+}
+
+   
+   button span {
+    mix-blend-mode: none;
+    display: block;
+   }
+   
+   button:after {
+    background-color: #5D00FF;
+   }
+   
+   button:before {
+    background-color: #FF1731;
+   }
+   
+   button:hover {
+    background-color: #FFF65B;
+    transition: background 0.3s 0.1s;
+   }
+   
+   button:hover:before {
+    --z: 0.04;
+    animation: translateWobble 2.2s ease forwards;
+   }
+   
+   button:hover:after {
+    --z: -0.06;
+    animation: translateWobble 2.2s ease forwards;
+   }
+   
+   @keyframes rotateAngle {
+    0% {
+     transform: rotateY(0deg) rotateX(10deg);
+     -webkit-animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+     animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+    }
+   
+    25% {
+     transform: rotateY(20deg) rotateX(10deg);
+    }
+   
+    50% {
+     transform: rotateY(0deg) rotateX(10deg);
+     -webkit-animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+     animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+    }
+   
+    75% {
+     transform: rotateY(-20deg) rotateX(10deg);
+    }
+   
+    100% {
+     transform: rotateY(0deg) rotateX(10deg);
+    }
+   }
+   
+   @keyframes translateWobble {
+    0% {
+     opacity: 0;
+     transform: translate3d(calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
+    }
+   
+    16% {
+     transform: translate3d(calc(var(--z) * 160px), calc(var(--z) * 160px), calc(var(--z) * 160px));
+    }
+   
+    28% {
+     opacity: 1;
+     transform: translate3d(calc(var(--z) * 70px), calc(var(--z) * 70px), calc(var(--z) * 70px));
+    }
+   
+    44% {
+     transform: translate3d(calc(var(--z) * 130px), calc(var(--z) * 130px), calc(var(--z) * 130px));
+    }
+   
+    59% {
+     transform: translate3d(calc(var(--z) * 85px), calc(var(--z) * 85px), calc(var(--z) * 85px));
+    }
+   
+    73% {
+     transform: translate3d(calc(var(--z) * 110px), calc(var(--z) * 110px), calc(var(--z) * 110px));
+    }
+   
+    88% {
+     opacity: 1;
+     transform: translate3d(calc(var(--z) * 90px), calc(var(--z) * 90px), calc(var(--z) * 90px));
+    }
+   
+    100% {
+     opacity: 1;
+     transform: translate3d(calc(var(--z) * 100px), calc(var(--z) * 100px), calc(var(--z) * 100px));
+    }
+   }
+
+   .atarimae {
+    width: 37vw;            /* 400px */
+    height: 29.5vh;         /* 200px */
+    background: linear-gradient(25deg,#888888 5%,#ffffff 50%,#888fff 95%);
+    border-radius: 3.7vw;   /* 40px */
+    position: relative;
+    text-align: center;
+    top: -77vh;             /* -400px */
+    left: 4.6vw;            /* 50px */
+    border-bottom: 0.46vw solid rgba(0,0,0,0.810025); /* 5px */
+    border-right: 0.46vw solid rgba(0,0,0,0.810025);  /* 5px */
+    box-shadow: 0.93vw 0.93vw 0.93vw rgba(255,255,255,0.310025); /* 10px */
+}
+
+h2 {
+    position: relative;
+    top: 0.9vh;             /* 10px */
+    font-size: 3.24vw;      /* 35px */
+}
+
+h4 {
+    font-size: 1.85vw;      /* 20px */
+    position: relative;
+    top: -0.9vh;            /* -10px */
+}
+
+#message {
+    position: relative;
+    top: -30vh;
+    left: -5vw;
+}

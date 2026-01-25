@@ -1,0 +1,3545 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="login-java.css">
+  <link rel="stylesheet" href="sumahou-login.css">
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <div class="background">
+    <div class="m1">
+      <button id="menu11" class="m11">go to top</button>
+    </div>
+    <div class="m2">
+      <button id="menu12" class="m12">HTML</button>
+    </div>
+    <div class="m3">
+      <button id="menu13" class="m13">CSS</button>
+    </div>
+    <div class="html"><button id="menu12"></button></div>
+    <div class="home" id="home">
+      <div class="sidebar">
+        <button class="m" id="menu1"><span><br>Variables</span></button>
+        <button id="menu2" class="m"><span><br>Data Types</span></button>
+        <button id="menu3" class="m"><span><br>Operators</span></button>
+        <button id="menu4" class="m"><span><br>Control Flow</span></button>
+        <button id="menu5" class="m"><span><br>Functions</span></button>
+        <button id="menu6" class="m"><span><br>Objects</span></button>
+        <button id="menu7" class="m"><span><br>Arrays</span></button>
+        <button id="menu8" class="m"><span><br>Methods</span></button>
+        <button id="menu9" class="m"><span><br>Document Object Mode</span></button>
+        <button id="menu10" class="m"><span><br>Asynchronous & API </span></button>
+      </div>
+    </div>
+
+    <div class="wolk" >
+      <center class="secret">
+        <div id="homes">
+          <h1 class="H">HOME</h1>
+          <h2>・これは JavaScriptを教え</h2>
+          <h3>主題</h3>
+          <h4>・Variables</h4>
+          <h4>・Data Types</h4>
+          <h4>・Operators</h4>
+          <h4>・Control Flow</h4>
+          <h4>・Functions</h4>
+          <h4>・Objects</h4>
+          <h4>・Arrays</h4>
+          <h4>・Methods</h4>
+          <h4>・Document Object Mode</h4>
+          <h4>・Asynchronous & API</h4>
+        </div>
+        <div id="Vb">
+          <header>
+            <h1>変数（へんすう） - JavaScript の基本</h1>
+            <div class="muted">変数とは、値を保存する「箱」のようなものです。</div>
+          </header>
+
+          <section class="card">
+            <h2>1. 変数の宣言方法</h2>
+            <p class="muted">
+              JavaScript では、変数を宣言する方法が 3 つあります。
+            </p>
+            <table>
+              <tr>
+                <th>宣言方法</th>
+                <th>読み方</th>
+                <th>使う場面</th>
+                <th>特徴</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td><code>var</code></td>
+                <td>ヴァー</td>
+                <td>古い書き方（ES5以前）</td>
+                <td>関数スコープ・hoistingあり</td>
+                <td><code>var x = 10;</code></td>
+              </tr>
+              <tr>
+                <td><code>let</code></td>
+                <td>レット</td>
+                <td>最も一般的</td>
+                <td>ブロックスコープ（安全）</td>
+                <td><code>let age = 18;</code></td>
+              </tr>
+              <tr>
+                <td><code>const</code></td>
+                <td>コンスト</td>
+                <td>値を固定したいとき</td>
+                <td>再代入できない（定数）</td>
+                <td><code>const name = "Aoi";</code></td>
+              </tr>
+            </table>
+            <div class="note">🔹 現在は <code>let</code> と <code>const</code> を使うのが一般的です。</div>
+          </section>
+
+          <section class="card">
+            <h2>2. データ型（Data Types）</h2>
+            <p class="muted">変数にはさまざまな種類の値を入れることができます。</p>
+            <table>
+              <tr>
+                <th>データ型</th>
+                <th>例</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>Number（数値）</td>
+                <td><code>let score = 99;</code></td>
+                <td>整数・小数などの数</td>
+              </tr>
+              <tr>
+                <td>String（文字列）</td>
+                <td><code>let name = "Aoi";</code></td>
+                <td>文字・文章を表す</td>
+              </tr>
+              <tr>
+                <td>Boolean（真偽値）</td>
+                <td><code>let pass = true;</code></td>
+                <td>true または false</td>
+              </tr>
+              <tr>
+                <td>Undefined</td>
+                <td><code>let x;</code></td>
+                <td>値がまだ代入されていない</td>
+              </tr>
+              <tr>
+                <td>Null</td>
+                <td><code>let y = null;</code></td>
+                <td>意図的に「空」にする</td>
+              </tr>
+              <tr>
+                <td>Object（オブジェクト）</td>
+                <td><code>let person = {name:"Aoi", age:18};</code></td>
+                <td>複数の値をまとめて保持</td>
+              </tr>
+              <tr>
+                <td>Array（配列）</td>
+                <td><code>let fruits = ["apple","banana"];</code></td>
+                <td>複数の値を順番に保持</td>
+              </tr>
+              <tr>
+                <td>Symbol</td>
+                <td><code>let id = Symbol("id");</code></td>
+                <td>一意な値を表す</td>
+              </tr>
+              <tr>
+                <td>BigInt</td>
+                <td><code>let big = 1234567890123456789n;</code></td>
+                <td>非常に大きな数値を扱う</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>3. 使用例</h2>
+            <pre>
+              <code class="code">
+                let age = 20;                // 数値
+                         const name = "Aoi";         // 文字列（定数）
+                 let pass = true;            // 真偽値
+                let colors = ["red","blue"]; // 配列
+                              let person = {name:"Aoi", age:20}; // オブジェクト
+               let nothing = null;         // Null
+                    let something;              // Undefined
+              </code>
+            </pre>
+          </section>
+
+          <section class="card">
+            <h2>4. まとめ</h2>
+            <table>
+              <tr>
+                <th>種類</th>
+                <th>説明</th>
+                <th>再代入できる？</th>
+              </tr>
+              <tr>
+                <td><code>let</code></td>
+                <td>一般的な変数（何でも入る）</td>
+                <td>✅ できる</td>
+              </tr>
+              <tr>
+                <td><code>const</code></td>
+                <td>定数（値を固定）</td>
+                <td>❌ できない</td>
+              </tr>
+              <tr>
+                <td><code>var</code></td>
+                <td>古い書き方（非推奨）</td>
+                <td>✅ できるが注意</td>
+              </tr>
+            </table>
+          </section>
+
+          <footer class="muted" style="margin-top:16px;">
+            📝 このページは JavaScript の <strong>変数（Variables）</strong> の基礎をまとめたものです。
+            <br>他の例（配列・オブジェクト・スコープなど）も追加できます。
+          </footer>
+        </div>
+        <div id="DT">
+          <header>
+            <h1>データ型（Data Types） - JavaScript の基本</h1>
+            <div class="muted">JavaScript では、変数にいろいろな種類の値を入れることができます。</div>
+          </header>
+
+          <section class="card">
+            <h2>1. データ型とは？</h2>
+            <p class="muted">
+              データ型（Data Type）とは、<strong>変数の中にどんな種類の値が入っているか</strong>を示すものです。
+              JavaScript では「プリミティブ型」と「オブジェクト型」に分かれます。
+            </p>
+            <div class="note">
+              🔹 <strong>プリミティブ型</strong>：1つの値だけを持つ（例：数値、文字列、真偽値など）<br>
+              🔹 <strong>オブジェクト型</strong>：複数の値をまとめて扱う（例：配列、オブジェクトなど）
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>2. プリミティブ型（Primitive Types）</h2>
+            <table>
+              <tr>
+                <th>データ型</th>
+                <th>例</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td><strong>Number（数値）</strong></td>
+                <td><code>let age = 20;</code></td>
+                <td>整数・小数・負の数など</td>
+              </tr>
+              <tr>
+                <td><strong>String（文字列）</strong></td>
+                <td><code>let name = "Aoi";</code></td>
+                <td>文字や文章。「"」または「'」で囲む</td>
+              </tr>
+              <tr>
+                <td><strong>Boolean（真偽値）</strong></td>
+                <td><code>let pass = true;</code></td>
+                <td>true（真）か false（偽）</td>
+              </tr>
+              <tr>
+                <td><strong>Undefined</strong></td>
+                <td><code>let x;</code></td>
+                <td>まだ値が代入されていない状態</td>
+              </tr>
+              <tr>
+                <td><strong>Null</strong></td>
+                <td><code>let y = null;</code></td>
+                <td>「何もない」ことを明示的に示す</td>
+              </tr>
+              <tr>
+                <td><strong>Symbol</strong></td>
+                <td><code>let id = Symbol("id");</code></td>
+                <td>一意（ユニーク）な値を作る</td>
+              </tr>
+              <tr>
+                <td><strong>BigInt</strong></td>
+                <td><code>let big = 9007199254740993n;</code></td>
+                <td>非常に大きな整数を扱える</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>3. オブジェクト型（Object Types）</h2>
+            <p class="muted">
+              複数の値やデータをまとめて管理できる型です。
+            </p>
+            <table>
+              <tr>
+                <th>型</th>
+                <th>例</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td><strong>Object（オブジェクト）</strong></td>
+                <td><code>let person = { name:"Aoi", age:18 };</code></td>
+                <td>キーと値のペアをまとめる</td>
+              </tr>
+              <tr>
+                <td><strong>Array（配列）</strong></td>
+                <td><code>let colors = ["red","blue","green"];</code></td>
+                <td>複数の値を順番に格納</td>
+              </tr>
+              <tr>
+                <td><strong>Function（関数）</strong></td>
+                <td><code>function sayHi(){ alert("こんにちは"); }</code></td>
+                <td>動作（処理）をまとめたもの</td>
+              </tr>
+              <tr>
+                <td><strong>Date</strong></td>
+                <td><code>let now = new Date();</code></td>
+                <td>日付や時刻を扱う</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>4. typeof 演算子で型を調べる</h2>
+            <pre><code class="code code-1">
+                    let x = 10;
+                       let y = "Aoi";
+                      let z = true;
+      
+                                           console.log(typeof x); // "number"
+                                           console.log(typeof y); // "string"
+                                            console.log(typeof z); // "boolean"
+      </code></pre>
+            <div class="note">💡 <code>typeof</code> は値の型を文字列で返します。</div>
+          </section>
+
+          <section class="card">
+            <h2>5. まとめ</h2>
+            <table>
+              <tr>
+                <th>分類</th>
+                <th>型の名前</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>プリミティブ型</td>
+                <td>Number, String, Boolean, Undefined, Null, Symbol, BigInt</td>
+                <td>単一の値を保持</td>
+              </tr>
+              <tr>
+                <td>オブジェクト型</td>
+                <td>Object, Array, Function, Date など</td>
+                <td>複数の値や構造を保持</td>
+              </tr>
+            </table>
+          </section>
+
+          <footer class="muted" style="margin-top:16px;">
+            📝 このページは JavaScript の <strong>データ型 (Data Types)</strong> の基礎をまとめたものです。
+            <br>もし希望があれば、<strong>演習付き（型を自動判別する入力フォーム）</strong>も作成できます。
+          </footer>
+        </div>
+        <div id="Pt">
+          <header>
+            <h1>演算子（Operators） - JavaScript の基本</h1>
+            <div class="muted">JavaScript では、計算・比較・代入などを行うために「演算子」を使います。</div>
+          </header>
+
+          <section class="card">
+            <h2>1. 演算子とは？</h2>
+            <p class="muted">
+              演算子（Operator）とは、<strong>値や変数に対して計算・比較・処理</strong>を行うための記号のことです。
+            </p>
+            <div class="note">
+              🔹 <strong>算術演算子</strong>：足す、引く、掛けるなどの計算<br>
+              🔹 <strong>比較演算子</strong>：値の大小や一致を調べる<br>
+              🔹 <strong>論理演算子</strong>：条件を組み合わせる<br>
+              🔹 <strong>代入演算子</strong>：変数へ値を入れる・更新する
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>2. 算術演算子（Arithmetic Operators）</h2>
+            <table>
+              <tr>
+                <th>演算子</th>
+                <th>例</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>+</td>
+                <td><code>5 + 3</code></td>
+                <td>足し算</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td><code>7 - 2</code></td>
+                <td>引き算</td>
+              </tr>
+              <tr>
+                <td>*</td>
+                <td><code>4 * 6</code></td>
+                <td>掛け算</td>
+              </tr>
+              <tr>
+                <td>/</td>
+                <td><code>10 / 2</code></td>
+                <td>割り算</td>
+              </tr>
+              <tr>
+                <td>%</td>
+                <td><code>10 % 3</code></td>
+                <td>余り（モジュロ）</td>
+              </tr>
+              <tr>
+                <td>**</td>
+                <td><code>2 ** 3</code></td>
+                <td>べき乗（Power）</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>3. 比較演算子（Comparison Operators）</h2>
+            <table>
+              <tr>
+                <th>演算子</th>
+                <th>例</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>==</td>
+                <td><code>5 == "5"</code></td>
+                <td>値が等しい（型は無視）</td>
+              </tr>
+              <tr>
+                <td>===</td>
+                <td><code>5 === 5</code></td>
+                <td>値と型が等しい</td>
+              </tr>
+              <tr>
+                <td>!=</td>
+                <td><code>5 != 3</code></td>
+                <td>値が異なる</td>
+              </tr>
+              <tr>
+                <td>!==</td>
+                <td><code>5 !== "5"</code></td>
+                <td>値または型が異なる</td>
+              </tr>
+              <tr>
+                <td>&gt;</td>
+                <td><code>7 > 2</code></td>
+                <td>より大きい</td>
+              </tr>
+              <tr>
+                <td>&lt;</td>
+                <td><code>3 &lt; 5</code></td>
+                <td>より小さい</td>
+              </tr>
+              <tr>
+                <td>&gt;=</td>
+                <td><code>5 >= 5</code></td>
+                <td>以上</td>
+              </tr>
+              <tr>
+                <td>&lt;=</td>
+                <td><code>3 <= 4</code></td>
+                <td>以下</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>4. 論理演算子（Logical Operators）</h2>
+            <table>
+              <tr>
+                <th>演算子</th>
+                <th>例</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>&&</td>
+                <td><code>true && false</code></td>
+                <td>AND（両方真なら真）</td>
+              </tr>
+              <tr>
+                <td>||</td>
+                <td><code>true || false</code></td>
+                <td>OR（どちらか真なら真）</td>
+              </tr>
+              <tr>
+                <td>!</td>
+                <td><code>!true</code></td>
+                <td>NOT（真偽を反転）</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>5. 代入演算子（Assignment Operators）</h2>
+            <table>
+              <tr>
+                <th>演算子</th>
+                <th>例</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>=</td>
+                <td><code>x = 5</code></td>
+                <td>代入</td>
+              </tr>
+              <tr>
+                <td>+=</td>
+                <td><code>x += 1</code></td>
+                <td>x に 1 を足す</td>
+              </tr>
+              <tr>
+                <td>-=</td>
+                <td><code>x -= 1</code></td>
+                <td>x から 1 を引く</td>
+              </tr>
+              <tr>
+                <td>*=</td>
+                <td><code>x *= 2</code></td>
+                <td>x を 2 倍</td>
+              </tr>
+              <tr>
+                <td>/=</td>
+                <td><code>x /= 2</code></td>
+                <td>x を半分に</td>
+              </tr>
+              <tr>
+                <td>%=</td>
+                <td><code>x %= 3</code></td>
+                <td>余りを代入</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>6. typeof を使って演算子の結果を調べる</h2>
+            <pre><code class="code code-1 code-2">
+          let a = 10 + 5;
+          let b = 10 > 3;
+                 let c = true && false;
+          
+                             console.log(typeof a); // "number"
+                              console.log(typeof b); // "boolean"
+                              console.log(typeof c); // "boolean"
+          </code></pre>
+            <div class="note">💡 <code>typeof</code> は値の型を文字列で返します。</div>
+          </section>
+
+          <section class="card">
+            <h2>7. まとめ</h2>
+            <table>
+              <tr>
+                <th>分類</th>
+                <th>演算子</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>算術演算子</td>
+                <td>+, -, *, /, %, **</td>
+                <td>計算を行う</td>
+              </tr>
+              <tr>
+                <td>比較演算子</td>
+                <td>==, ===, !=, !==, &gt;, &lt;, &gt;=, &lt;=</td>
+                <td>値の比較を行う</td>
+              </tr>
+              <tr>
+                <td>論理演算子</td>
+                <td>&&, ||, !</td>
+                <td>条件を組み合わせる</td>
+              </tr>
+              <tr>
+                <td>代入演算子</td>
+                <td>=, +=, -=, *=, /=, %=</td>
+                <td>変数へ値を代入・更新</td>
+              </tr>
+            </table>
+          </section>
+          <footer class="muted" style="margin-top:16px;">
+            📝 このページは JavaScript の <strong>演算子 (Operators)</strong> の基礎をまとめたものです。
+            <br>必要なら、<strong>演習問題・自動チェック機能</strong>も追加できます。
+          </footer>
+        </div>
+        <div id="CF">
+          <header>
+            <h1>制御構文（Control Flow） - JavaScript の基本</h1>
+            <div class="muted">プログラムを「どの順番で実行するか」をコントロールする仕組みです。</div>
+          </header>
+
+          <section class="card">
+            <h2>1. 制御構文とは？</h2>
+            <p class="muted">
+              制御構文（Control Flow）とは、<strong>条件分岐や繰り返し</strong>など、プログラムの流れを制御するための構文です。
+            </p>
+            <div class="note">
+              🔹 <strong>if / else</strong>：条件で処理を変える<br>
+              🔹 <strong>switch</strong>：複数の選択肢から選ぶ<br>
+              🔹 <strong>for / while</strong>：処理を繰り返す<br>
+              🔹 <strong>break / continue</strong>：ループ制御
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>2. 条件分岐（if / else）</h2>
+
+            <table>
+              <tr>
+                <th>構文</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td><code>if (条件) { ... }</code></td>
+                <td>条件が true のとき実行</td>
+              </tr>
+              <tr>
+                <td><code>else { ... }</code></td>
+                <td>上の条件が false のとき実行</td>
+              </tr>
+              <tr>
+                <td><code>else if (条件) { ... }</code></td>
+                <td>条件を追加</td>
+              </tr>
+            </table>
+
+            <pre><code class="code code-3">
+          // 例：スコア判定
+       let score = 85;
+          
+          if (score >= 90) {
+                      console.log("Aランク");
+                  } else if (score >= 70) {
+                       console.log("Bランク");
+ } else {
+                       console.log("Cランク");
+    }
+          </code></pre>
+
+          </section>
+
+          <section class="card">
+            <h2>3. switch 文（複数分岐）</h2>
+
+            <p class="muted">同じ変数を複数の値で分岐するときに便利。</p>
+
+            <table>
+              <tr>
+                <th>キーワード</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td><code>case</code></td>
+                <td>条件に一致したときの処理</td>
+              </tr>
+              <tr>
+                <td><code>break</code></td>
+                <td>switch 文を終了する</td>
+              </tr>
+              <tr>
+                <td><code>default</code></td>
+                <td>どれにも一致しなかったとき</td>
+              </tr>
+            </table>
+
+            <pre><code class="code code-3">
+              let fruit = "apple";
+          
+          switch (fruit) {
+       case "apple":
+                    console.log("りんごです");
+break;
+        case "banana":
+                    console.log("バナナです");
+break;
+  default:
+                    console.log("不明な果物");
+          }
+          </code></pre>
+
+          </section>
+
+          <section class="card">
+            <h2>4. 繰り返し（Loops）</h2>
+
+            <table>
+              <tr>
+                <th>構文</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td><code>for</code></td>
+                <td>決まった回数ループ</td>
+              </tr>
+              <tr>
+                <td><code>while</code></td>
+                <td>条件が true の間ループ</td>
+              </tr>
+              <tr>
+                <td><code>do...while</code></td>
+                <td>少なくとも1回実行してからループ</td>
+              </tr>
+            </table>
+
+            <h3>▶ for 文の例</h3>
+            <pre><code class="code">
+            for (let i = 1; i <= 5; i++) {
+                 console.log(i);  // 1〜5 を順に表示
+}
+          </code></pre>
+
+            <h3>▶ while 文の例</h3>
+            <pre><code class="code code-3">
+let n = 3;
+     while (n > 0) {
+           console.log(n);
+n--;
+}
+          </code></pre>
+
+            <h3>▶ do...while の例</h3>
+            <pre><code class="code code-3">
+      let x = 0;
+do {
+                                 console.log("1回は実行される");
+      x++;
+            } while (x < 0);
+          </code></pre>
+
+          </section>
+
+          <section class="card">
+            <h2>5. break / continue</h2>
+
+            <table>
+              <tr>
+                <th>キーワード</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td><code>break</code></td>
+                <td>ループを強制終了</td>
+              </tr>
+              <tr>
+                <td><code>continue</code></td>
+                <td>次のループにスキップ</td>
+              </tr>
+            </table>
+
+            <h3>▶ break の例</h3>
+            <pre><code class="code code-3">
+                       for (let i = 1; i <= 10; i++) {
+                if (i === 5) break;
+                             console.log(i); // 1〜4 で止まる
+}
+          </code></pre>
+
+            <h3>▶ continue の例</h3>
+            <pre><code class="code code-3">
+                       for (let i = 1; i <= 5; i++) {
+                    if (i === 3) continue;
+                                            console.log(i); // 1, 2, 4, 5 （3 をスキップ）
+}
+          </code></pre>
+
+          </section>
+
+          <section class="card">
+            <h2>6. まとめ</h2>
+
+            <table>
+              <tr>
+                <th>分類</th>
+                <th>構文</th>
+                <th>説明</th>
+              </tr>
+
+              <tr>
+                <td>条件分岐</td>
+                <td>if / else, else if</td>
+                <td>条件に応じて処理を分ける</td>
+              </tr>
+
+              <tr>
+                <td>複数分岐</td>
+                <td>switch</td>
+                <td>複数の値に応じた処理</td>
+              </tr>
+
+              <tr>
+                <td>繰り返し</td>
+                <td>for, while, do...while</td>
+                <td>ループ処理を行う</td>
+              </tr>
+
+              <tr>
+                <td>ループ制御</td>
+                <td>break, continue</td>
+                <td>ループの動きを調整</td>
+              </tr>
+
+            </table>
+          </section>
+
+          <footer class="muted" style="margin-top:16px;">
+            📝 このページは JavaScript の <strong>制御構文（Control Flow）</strong> の基礎をまとめたものです。
+            <br>もし希望があれば、<strong>練習ページ・問題集・自動採点版</strong>も作成できます。
+          </footer>
+        </div>
+        <div id="Fc">
+          <header>
+            <h1>関数（Function） - JavaScript の基本</h1>
+            <div class="muted">関数とは、特定の処理をまとめた「再利用可能な命令の塊」です。</div>
+          </header>
+
+          <section class="card">
+            <h2>1. 関数とは？</h2>
+            <p class="muted">
+              JavaScript の関数は、同じ処理を何度も使いたいときや、処理を整理したいときに使います。
+            </p>
+
+            <table>
+              <tr>
+                <th>特徴</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>再利用可能</td>
+                <td>一度作れば何度でも呼び出せる</td>
+                <td><code>greet("Alice");</code></td>
+              </tr>
+              <tr>
+                <td>入力と出力</td>
+                <td>パラメータを受け取り、値を返すことができる</td>
+                <td><code>return a + b;</code></td>
+              </tr>
+              <tr>
+                <td>整理しやすい</td>
+                <td>コードのまとまりを作って見やすくできる</td>
+                <td><code>function add(a, b) { ... }</code></td>
+              </tr>
+            </table>
+
+            <div class="note">
+              🔹 関数はプログラミングの基本で、オブジェクトや配列と一緒に使うことが多いです。
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>2. 関数の基本構文</h2>
+            <p class="muted">function キーワードで作成し、return で値を返します。</p>
+
+            <pre>
+              <code class="code">
+      function greet(name) {
+                    return "Hello, " + name + "!";
+}
+          
+                               console.log(greet("Alice")); // "Hello, Alice!"
+              </code>
+            </pre>
+
+            <table>
+              <tr>
+                <th>操作</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>呼び出し</td>
+                <td>関数の名前に引数を渡して実行</td>
+                <td><code>greet("Bob");</code></td>
+              </tr>
+              <tr>
+                <td>値を返す</td>
+                <td>return を使って計算結果を返す</td>
+                <td><code>let sum = add(2, 3);</code></td>
+              </tr>
+              <tr>
+                <td>パラメータなし</td>
+                <td>引数なしで呼び出せる関数も作れる</td>
+                <td><code>sayHi();</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>3. 関数の種類</h2>
+            <p class="muted">関数にはいくつかの書き方があります。</p>
+
+            <table>
+              <tr>
+                <th>種類</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>名前付き関数</td>
+                <td>function キーワードで定義</td>
+                <td>
+                  <pre class="p1"><code>function add(a, b) { return a + b; }</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>匿名関数</td>
+                <td>変数に代入して使う</td>
+                <td>
+                  <pre class="p1"><code>const multiply = function(a, b) { return a * b; };</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>アロー関数</td>
+                <td>ES6以降、短く書ける</td>
+                <td>
+                  <pre class="p1"><code>const divide = (a, b) => a / b;</code></pre>
+                </td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>4. 関数とオブジェクトの組み合わせ</h2>
+            <p class="muted">オブジェクトの中に関数を入れると「メソッド」と呼びます。</p>
+
+            <pre>
+              <code class="code">
+          const dog = {
+              name: "ポポ",
+                   bark: function() {
+                     return "ワン！"
+  }
+};
+          
+                                 console.log(dog.bark()); // "ワン！"
+              </code>
+            </pre>
+          </section>
+
+          <section class="card">
+            <h2>5. まとめ</h2>
+            <table>
+              <tr>
+                <th>機能</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>再利用</td>
+                <td>同じ処理を何度も使える</td>
+              </tr>
+              <tr>
+                <td>パラメータ</td>
+                <td>入力値を受け取ることができる</td>
+              </tr>
+              <tr>
+                <td>戻り値</td>
+                <td>計算結果などを返せる</td>
+              </tr>
+              <tr>
+                <td>オブジェクト内で使用</td>
+                <td>メソッドとして関数を持たせられる</td>
+              </tr>
+            </table>
+          </section>
+
+          <footer class="muted" style="margin-top:16px;">
+            📝 このページは JavaScript の <strong>関数（Functions）</strong> の基礎をまとめたものです。
+            <br>オブジェクト・配列・メソッドなどと組み合わせて、より複雑な処理を作ることができます。
+          </footer>
+
+        </div>
+        <div id="O">
+          <header>
+            <h1>オブジェクト（Object） - JavaScript の基本</h1>
+            <div class="muted">オブジェクトとは、複数の値を「キー : 値」の形でまとめて管理できるデータ構造です。</div>
+          </header>
+
+          <section class="card">
+            <h2>1. オブジェクトとは？</h2>
+            <p class="muted">
+              JavaScript のオブジェクトは、1つの名前の中に複数の情報をまとめたいときに使います。
+            </p>
+
+            <table>
+              <tr>
+                <th>特徴</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>キーと値</td>
+                <td>「name: 'Aoi'」のように、名前と値のペアで構成される</td>
+                <td><code>{ name: "Aoi", age: 18 }</code></td>
+              </tr>
+              <tr>
+                <td>種類をまとめられる</td>
+                <td>文字列・数値・関数など、いろいろ入れられる</td>
+                <td><code>person.name / person.age</code></td>
+              </tr>
+              <tr>
+                <td>柔軟性が高い</td>
+                <td>あとから項目を追加・削除できる</td>
+                <td><code>person.city = "Tokyo";</code></td>
+              </tr>
+            </table>
+
+            <div class="note">
+              🔹 オブジェクトは JavaScript を使う上で最も重要なデータ構造の一つです。
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>2. オブジェクトの基本構文</h2>
+            <p class="muted">キーと値の組み合わせで作ります。</p>
+
+            <pre>
+              <code class="code">
+          const person = {
+            name: "Aoi",
+        age: 18,
+             city: "Tokyo"
+};
+              </code>
+            </pre>
+
+            <table>
+              <tr>
+                <th>操作</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>値の取得</td>
+                <td>ドット（.）またはブラケットでアクセス</td>
+                <td><code>person.name</code></td>
+              </tr>
+              <tr>
+                <td>値の追加</td>
+                <td>新しいキーと値を追加できる</td>
+                <td><code>person.country = "Japan";</code></td>
+              </tr>
+              <tr>
+                <td>値の削除</td>
+                <td><code>delete</code> を使用</td>
+                <td><code>delete person.city;</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>3. メソッド（オブジェクトの関数）</h2>
+            <p class="muted">オブジェクトの中に関数を入れることもできます。</p>
+
+            <pre>
+              <code class="code">
+          const dog = {
+               name: "ポポ",
+                    bark: function() {
+                       return "ワン！";
+        }
+};
+          
+                                 console.log(dog.bark()); // "ワン！"
+              </code>
+            </pre>
+          </section>
+
+          <section class="card">
+            <h2>4. オブジェクトと配列の組み合わせ</h2>
+            <p class="muted">現実のデータは、よく「配列 + オブジェクト」で表現されます。</p>
+
+            <pre>
+              <code class="code">
+          const students = [
+                         { name: "Aoi", age: 18 },
+                         { name: "Sora", age: 17 }
+];
+              </code>
+            </pre>
+
+            <table>
+              <tr>
+                <th>用途</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>リスト表示</td>
+                <td>ユーザー一覧、商品一覧などに使う</td>
+              </tr>
+              <tr>
+                <td>データの管理</td>
+                <td>1つの項目に複数の情報がある時に便利</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>5. まとめ</h2>
+            <table>
+              <tr>
+                <th>機能</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>キーと値のセット</td>
+                <td>複数の情報を1つにまとめられる</td>
+              </tr>
+              <tr>
+                <td>柔軟性</td>
+                <td>追加・変更・削除が簡単</td>
+              </tr>
+              <tr>
+                <td>メソッド</td>
+                <td>関数を持つことができる</td>
+              </tr>
+              <tr>
+                <td>配列との相性</td>
+                <td>オブジェクトの配列は実務で最もよく使われる形</td>
+              </tr>
+            </table>
+          </section>
+
+          <footer class="muted" style="margin-top:16px;">
+            📝 このページは JavaScript の <strong>オブジェクト（Objects）</strong> の基礎をまとめたものです。
+            <br>関数・クラス・プロトタイプなど、さらに詳しく説明を追加できます。
+          </footer>
+        </div>
+        <div id="A">
+          <header>
+            <h1>配列（Array） - JavaScript の基本</h1>
+            <div class="muted">配列とは、複数の値をまとめて順番に保存できるデータ構造です。</div>
+          </header>
+
+          <section class="card">
+            <h2>1. 配列とは？</h2>
+            <p class="muted">
+              配列（Array）は、<strong>複数のデータを1つの変数で管理する</strong>ための仕組みです。
+            </p>
+
+            <table>
+              <tr>
+                <th>特徴</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>複数の値を保存</td>
+                <td>順番に並んだデータをまとめて扱う</td>
+                <td><code>["red","blue","green"]</code></td>
+              </tr>
+              <tr>
+                <td>インデックスでアクセス</td>
+                <td>0番から始まる番号で取り出す</td>
+                <td><code>colors[0]</code></td>
+              </tr>
+              <tr>
+                <td>柔軟に変更可能</td>
+                <td>追加・削除・変更が簡単</td>
+                <td><code>colors.push("yellow")</code></td>
+              </tr>
+            </table>
+
+            <div class="note">
+              🔹 配列は JavaScript の中で最もよく使われるデータ構造の1つです。
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>2. 配列の作り方と基本操作</h2>
+            <p class="muted">代表的な操作をまとめています。</p>
+
+            <pre>
+              <code class="code">
+                      const colors = ["red", "blue", "green"];
+          
+                     console.log(colors[0]); // red（0番目）
+                      console.log(colors.length); // 長さ（3）
+              </code>
+            </pre>
+
+            <table>
+              <tr>
+                <th>操作</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>要素を追加</td>
+                <td>末尾に追加</td>
+                <td><code>colors.push("yellow");</code></td>
+              </tr>
+              <tr>
+                <td>要素を削除</td>
+                <td>最後を削除</td>
+                <td><code>colors.pop();</code></td>
+              </tr>
+              <tr>
+                <td>先頭に追加</td>
+                <td>最初に追加される</td>
+                <td><code>colors.unshift("black");</code></td>
+              </tr>
+              <tr>
+                <td>先頭を削除</td>
+                <td>最初の要素が消える</td>
+                <td><code>colors.shift();</code></td>
+              </tr>
+              <tr>
+                <td>要素の変更</td>
+                <td>インデックスを指定して変更</td>
+                <td><code>colors[1] = "pink";</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>3. 配列のループ（繰り返し）</h2>
+            <p class="muted">配列は繰り返し処理と相性がとても良いです。</p>
+
+            <pre>
+              <code class="code">
+                                const fruits = ["apple", "banana", "orange"];
+          
+              for (let fruit of fruits) {
+            console.log(fruit);
+    }
+// apple
+// banana
+// orange
+              </code>
+            </pre>
+          </section>
+
+          <section class="card">
+            <h2>4. 配列の便利メソッド</h2>
+            <p class="muted">よく使うメソッドをまとめています。</p>
+
+            <table>
+              <tr>
+                <th>メソッド</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td><code>map()</code></td>
+                <td>全ての要素を変換して新しい配列を返す</td>
+                <td><code>nums.map(n ⇒ n * 2)</code></td>
+              </tr>
+              <tr>
+                <td><code>filter()</code></td>
+                <td>条件に合うものだけ取り出す</td>
+                <td><code>nums.filter(n ⇒ n > 10)</code></td>
+              </tr>
+              <tr>
+                <td><code>find()</code></td>
+                <td>最初に一致した要素を返す</td>
+                <td><code>users.find(u ⇒ u.id === 1)</code></td>
+              </tr>
+              <tr>
+                <td><code>includes()</code></td>
+                <td>値が含まれているか調べる</td>
+                <td><code>colors.includes("red")</code></td>
+              </tr>
+              <tr>
+                <td><code>join()</code></td>
+                <td>配列を文字列に変換</td>
+                <td><code>["a","b"].join("-")</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>5. 配列とオブジェクトの組み合わせ</h2>
+            <p class="muted">実務では最も多い形です。</p>
+
+            <pre>
+              <code class="code">
+          const users = [
+                             { name: "Aoi", age: 18 },
+                              { name: "Sora", age: 17 },
+                             { name: "Yuki", age: 19 }
+  ];
+          
+                            console.log(users[0].name); // Aoi
+              </code>
+            </pre>
+          </section>
+
+          <section class="card">
+            <h2>6. まとめ</h2>
+            <table>
+              <tr>
+                <th>ポイント</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>複数の値を管理</td>
+                <td>データをまとめて扱える</td>
+              </tr>
+              <tr>
+                <td>柔軟に操作可能</td>
+                <td>追加・削除・変更が簡単</td>
+              </tr>
+              <tr>
+                <td>メソッドが豊富</td>
+                <td>処理の効率が高い</td>
+              </tr>
+              <tr>
+                <td>実務で必須</td>
+                <td>API・データ管理で必ず使う</td>
+              </tr>
+            </table>
+          </section>
+
+          <footer class="muted" style="margin-top:16px;">
+            📝 このページは JavaScript の <strong>配列（Arrays）</strong> の基礎をまとめたものです。
+            <br>必要であれば、map/filter の練習問題やビジュアル解説も追加できます。
+          </footer>
+        </div>
+        <div id="M">
+          <header>
+            <h1>メソッド（Method） - JavaScript のオブジェクトの関数</h1>
+            <div class="muted">メソッドとは、オブジェクトの中に定義された関数のことです。</div>
+          </header>
+
+          <section class="card">
+            <h2>1. メソッドとは？</h2>
+            <p class="muted">
+              メソッドは、オブジェクトに関連する処理をまとめるための関数です。
+            </p>
+
+            <table>
+              <tr>
+                <th>特徴</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>オブジェクトに属する</td>
+                <td>オブジェクトのプロパティとして関数を持つ</td>
+                <td><code>dog.bark();</code></td>
+              </tr>
+              <tr>
+                <td>this キーワード</td>
+                <td>同じオブジェクト内のプロパティにアクセスできる</td>
+                <td><code>this.name</code></td>
+              </tr>
+              <tr>
+                <td>再利用可能</td>
+                <td>オブジェクトのデータに基づいて複数回呼び出せる</td>
+                <td><code>user.sayHi();</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>2. メソッドの基本例</h2>
+            <pre>
+              <code class="code">
+  const dog = {
+        name: "ポポ",
+             bark: function() {
+                                       return this.name + "はワン！と鳴く";
+    }
+};
+          
+                                     console.log(dog.bark()); // "ポポはワン！と鳴く"
+              </code>
+            </pre>
+          </section>
+
+          <section class="card">
+            <h2>3. 短縮記法（ES6）</h2>
+            <p class="muted">ES6 以降は function キーワードを省略してメソッドを定義できます。</p>
+            <pre>
+              <code class="code">
+          const cat = {
+                   name: "ミケ",
+              meow() {
+                                                      return this.name + "はニャー！と鳴く";
+      }
+};
+          
+                                               console.log(cat.meow()); // "ミケはニャー！と鳴く"
+              </code>
+            </pre>
+          </section>
+
+          <section class="card">
+            <h2>4. メソッドと配列の組み合わせ</h2>
+            <p class="muted">オブジェクトの配列内にメソッドを持たせることも可能です。</p>
+
+            <pre>
+              <code class="code">
+      const users = [
+  {
+                 name: "Aoi",
+                                                   greet() { return "こんにちは、" + this.name; }
+    },
+  {
+                  name: "Sora",
+                                                   greet() { return "こんにちは、" + this.name; }
+}
+];
+          
+                                           console.log(users[0].greet()); // "こんにちは、Aoi"
+                                            console.log(users[1].greet()); // "こんにちは、Sora"
+              </code>
+            </pre>
+          </section>
+
+          <section class="card">
+            <h2>5. まとめ</h2>
+            <table>
+              <tr>
+                <th>機能</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>オブジェクト内の関数</td>
+                <td>そのオブジェクト専用の処理をまとめる</td>
+              </tr>
+              <tr>
+                <td>this キーワード</td>
+                <td>自分自身のプロパティにアクセスできる</td>
+              </tr>
+              <tr>
+                <td>再利用可能</td>
+                <td>オブジェクトのデータに応じて複数回呼び出せる</td>
+              </tr>
+              <tr>
+                <td>配列との組み合わせ</td>
+                <td>オブジェクト配列の各要素にメソッドを持たせられる</td>
+              </tr>
+            </table>
+          </section>
+
+          <footer class="muted" style="margin-top:16px;">
+            📝 このページは JavaScript の <strong>メソッド（Methods）</strong> の基礎をまとめたものです。
+            <br>オブジェクト・関数・配列と組み合わせて、より実務的なデータ操作が可能です。
+          </footer>
+          <header>
+            <h1>JavaScript のメソッド（Methods）一覧</h1>
+            <div class="muted">JavaScript の各データ型で使える便利なメソッドをまとめています。</div>
+          </header>
+
+          <section class="card">
+            <h2>1. 文字列（String）のメソッド</h2>
+            <table>
+              <tr>
+                <th>メソッド</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>charAt()</td>
+                <td>指定位置の文字を返す</td>
+                <td><code>"Hello".charAt(1); // "e"</code></td>
+              </tr>
+              <tr>
+                <td>charCodeAt()</td>
+                <td>指定位置の文字コードを返す</td>
+                <td><code>"A".charCodeAt(0); // 65</code></td>
+              </tr>
+              <tr>
+                <td>concat()</td>
+                <td>文字列を結合</td>
+                <td><code>"Hello".concat(" World"); // "Hello World"</code></td>
+              </tr>
+              <tr>
+                <td>includes()</td>
+                <td>文字列に指定文字が含まれるか</td>
+                <td><code>"Hello".includes("e"); // true</code></td>
+              </tr>
+              <tr>
+                <td>indexOf()</td>
+                <td>指定文字の最初の位置を返す</td>
+                <td><code>"Hello".indexOf("l"); // 2</code></td>
+              </tr>
+              <tr>
+                <td>lastIndexOf()</td>
+                <td>指定文字の最後の位置を返す</td>
+                <td><code>"Hello".lastIndexOf("l"); // 3</code></td>
+              </tr>
+              <tr>
+                <td>match()</td>
+                <td>正規表現にマッチする文字列を返す</td>
+                <td><code>"abc123".match(/\d+/); // ["123"]</code></td>
+              </tr>
+              <tr>
+                <td>replace()</td>
+                <td>文字列を置換</td>
+                <td><code>"Hello".replace("H","J"); // "Jello"</code></td>
+              </tr>
+              <tr>
+                <td>search()</td>
+                <td>正規表現にマッチする位置を返す</td>
+                <td><code>"abc123".search(/\d/); // 3</code></td>
+              </tr>
+              <tr>
+                <td>slice()</td>
+                <td>文字列を切り出す</td>
+                <td><code>"Hello".slice(1,4); // "ell"</code></td>
+              </tr>
+              <tr>
+                <td>split()</td>
+                <td>文字列を配列に分割</td>
+                <td><code>"a,b,c".split(","); // ["a","b","c"]</code></td>
+              </tr>
+              <tr>
+                <td>substring()</td>
+                <td>文字列を切り出す（slice類似）</td>
+                <td><code>"Hello".substring(1,4); // "ell"</code></td>
+              </tr>
+              <tr>
+                <td>toLowerCase()</td>
+                <td>小文字に変換</td>
+                <td><code>"HELLO".toLowerCase(); // "hello"</code></td>
+              </tr>
+              <tr>
+                <td>toUpperCase()</td>
+                <td>大文字に変換</td>
+                <td><code>"hello".toUpperCase(); // "HELLO"</code></td>
+              </tr>
+              <tr>
+                <td>trim()</td>
+                <td>前後の空白を削除</td>
+                <td><code>"  hello  ".trim(); // "hello"</code></td>
+              </tr>
+              <tr>
+                <td>startsWith()</td>
+                <td>指定文字で始まるか判定</td>
+                <td><code>"Hello".startsWith("He"); // true</code></td>
+              </tr>
+              <tr>
+                <td>endsWith()</td>
+                <td>指定文字で終わるか判定</td>
+                <td><code>"Hello".endsWith("lo"); // true</code></td>
+              </tr>
+              <tr>
+                <td>repeat()</td>
+                <td>文字列を繰り返す</td>
+                <td><code>"ha".repeat(3); // "hahaha"</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>2. 配列（Array）のメソッド</h2>
+            <table>
+              <tr>
+                <th>メソッド</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>push()</td>
+                <td>配列の末尾に追加</td>
+                <td><code>[1,2].push(3); // [1,2,3]</code></td>
+              </tr>
+              <tr>
+                <td>pop()</td>
+                <td>末尾の要素を削除</td>
+                <td><code>[1,2,3].pop(); // [1,2]</code></td>
+              </tr>
+              <tr>
+                <td>shift()</td>
+                <td>先頭の要素を削除</td>
+                <td><code>[1,2,3].shift(); // [2,3]</code></td>
+              </tr>
+              <tr>
+                <td>unshift()</td>
+                <td>先頭に追加</td>
+                <td><code>[2,3].unshift(1); // [1,2,3]</code></td>
+              </tr>
+              <tr>
+                <td>concat()</td>
+                <td>配列を結合</td>
+                <td><code>[1,2].concat([3,4]); // [1,2,3,4]</code></td>
+              </tr>
+              <tr>
+                <td>join()</td>
+                <td>配列を文字列に変換</td>
+                <td><code>[1,2,3].join("-"); // "1-2-3"</code></td>
+              </tr>
+              <tr>
+                <td>slice()</td>
+                <td>配列を切り出す</td>
+                <td><code>[1,2,3,4].slice(1,3); // [2,3]</code></td>
+              </tr>
+              <tr>
+                <td>splice()</td>
+                <td>削除・追加・置換</td>
+                <td><code>[1,2,3].splice(1,1,9); // [1,9,3]</code></td>
+              </tr>
+              <tr>
+                <td>forEach()</td>
+                <td>配列をループ処理</td>
+                <td><code>[1,2].forEach(n => console.log(n));</code></td>
+              </tr>
+              <tr>
+                <td>map()</td>
+                <td>新しい配列を返す</td>
+                <td><code>[1,2].map(n=>n*2); // [2,4]</code></td>
+              </tr>
+              <tr>
+                <td>filter()</td>
+                <td>条件に合う要素だけ返す</td>
+                <td><code>[1,2,3].filter(n=>n>1); // [2,3]</code></td>
+              </tr>
+              <tr>
+                <td>reduce()</td>
+                <td>全要素をまとめて値を作る</td>
+                <td><code>[1,2,3].reduce((a,b)=>a+b); // 6</code></td>
+              </tr>
+              <tr>
+                <td>some()</td>
+                <td>条件に合うものが1つでもあれば true</td>
+                <td><code>[1,2,3].some(n=>n>2); // true</code></td>
+              </tr>
+              <tr>
+                <td>every()</td>
+                <td>全てが条件に合えば true</td>
+                <td><code>[1,2,3].every(n=>n>0); // true</code></td>
+              </tr>
+              <tr>
+                <td>find()</td>
+                <td>条件に合う最初の要素を返す</td>
+                <td><code>[1,2,3].find(n=>n>1); // 2</code></td>
+              </tr>
+              <tr>
+                <td>findIndex()</td>
+                <td>条件に合う最初の要素のインデックスを返す</td>
+                <td><code>[1,2,3].findIndex(n=>n>1); // 1</code></td>
+              </tr>
+              <tr>
+                <td>sort()</td>
+                <td>配列を並べ替え</td>
+                <td><code>[3,1,2].sort(); // [1,2,3]</code></td>
+              </tr>
+              <tr>
+                <td>reverse()</td>
+                <td>配列を逆順に</td>
+                <td><code>[1,2,3].reverse(); // [3,2,1]</code></td>
+              </tr>
+              <tr>
+                <td>includes()</td>
+                <td>指定要素が含まれるか</td>
+                <td><code>[1,2,3].includes(2); // true</code></td>
+              </tr>
+              <tr>
+                <td>indexOf()</td>
+                <td>指定要素の最初の位置</td>
+                <td><code>[1,2,3].indexOf(2); // 1</code></td>
+              </tr>
+              <tr>
+                <td>lastIndexOf()</td>
+                <td>指定要素の最後の位置</td>
+                <td><code>[1,2,3,2].lastIndexOf(2); // 3</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>3. オブジェクト（Object）のメソッド</h2>
+            <table>
+              <tr>
+                <th>メソッド</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>Object.keys()</td>
+                <td>キーを配列で返す</td>
+                <td><code>Object.keys({a:1,b:2}); // ["a","b"]</code></td>
+              </tr>
+              <tr>
+                <td>Object.values()</td>
+                <td>値を配列で返す</td>
+                <td><code>Object.values({a:1,b:2}); // [1,2]</code></td>
+              </tr>
+              <tr>
+                <td>Object.entries()</td>
+                <td>[key,value]配列を返す</td>
+                <td><code>Object.entries({a:1}); // [["a",1]]</code></td>
+              </tr>
+              <tr>
+                <td>Object.assign()</td>
+                <td>オブジェクトをコピー・結合</td>
+                <td><code>Object.assign({}, {a:1}); // {a:1}</code></td>
+              </tr>
+              <tr>
+                <td>Object.freeze()</td>
+                <td>オブジェクトを変更不可に</td>
+                <td><code>Object.freeze(obj);</code></td>
+              </tr>
+              <tr>
+                <td>Object.seal()</td>
+                <td>プロパティの追加・削除不可</td>
+                <td><code>Object.seal(obj);</code></td>
+              </tr>
+              <tr>
+                <td>Object.hasOwn()</td>
+                <td>プロパティが存在するか</td>
+                <td><code>Object.hasOwn(obj,"a");</code></td>
+              </tr>
+              <tr>
+                <td>Object.fromEntries()</td>
+                <td>配列からオブジェクトを作る</td>
+                <td><code>Object.fromEntries([["a",1]]); // {a:1}</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>4. 数値（Number）のメソッド</h2>
+            <table>
+              <tr>
+                <th>メソッド</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>toString()</td>
+                <td>文字列に変換</td>
+                <td><code>(123).toString(); // "123"</code></td>
+              </tr>
+              <tr>
+                <td>toFixed()</td>
+                <td>小数点以下の桁数を指定</td>
+                <td><code>(1.234).toFixed(2); // "1.23"</code></td>
+              </tr>
+              <tr>
+                <td>toExponential()</td>
+                <td>指数表記に変換</td>
+                <td><code>(123).toExponential(); // "1.23e+2"</code></td>
+              </tr>
+              <tr>
+                <td>toPrecision()</td>
+                <td>全体の桁数を指定</td>
+                <td><code>(1.2345).toPrecision(3); // "1.23"</code></td>
+              </tr>
+              <tr>
+                <td>valueOf()</td>
+                <td>Numberオブジェクトの値を返す</td>
+                <td><code>(123).valueOf(); // 123</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <footer class="muted" style="margin-top:16px;">
+            📝 このページは JavaScript の <strong>メソッド（Methods）</strong> の基礎一覧です。
+            <br>文字列・配列・オブジェクト・数値などで使えるメソッドをまとめています。
+          </footer>
+
+        </div>
+        <div id="DOM">
+          <header>
+            <h1>DOM（Document Object Model） - JavaScript の基本</h1>
+            <div class="muted">DOM は、HTML を「木構造のオブジェクト」として扱う仕組みです。</div>
+          </header>
+
+          <section class="card">
+            <h2>1. DOMとは？</h2>
+            <p class="muted">
+              DOM（Document Object Model）とは、HTML や XML をブラウザが読み込んだときに生成される
+              「木構造のオブジェクト」のことです。JavaScript を使ってページの内容を読み取ったり、
+              書き換えたり、追加したりできます。
+            </p>
+
+            <table>
+              <tr>
+                <th>要素</th>
+                <th>読み方</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>Document</td>
+                <td>ドキュメント</td>
+                <td>ページ全体を表す最上位のオブジェクト</td>
+              </tr>
+              <tr>
+                <td>Element</td>
+                <td>エレメント</td>
+                <td>&lt;div&gt; や &lt;p&gt; などの HTML 要素</td>
+              </tr>
+              <tr>
+                <td>Node</td>
+                <td>ノード</td>
+                <td>DOM を構成する基本要素（テキストも含む）</td>
+              </tr>
+              <tr>
+                <td>Attribute</td>
+                <td>アトリビュート</td>
+                <td>id、class など要素の属性</td>
+              </tr>
+              <tr>
+                <td>Event</td>
+                <td>イベント</td>
+                <td>click, input などのユーザー操作</td>
+              </tr>
+            </table>
+
+            <div class="note">🔹 DOM を使うと、HTML の内容を JavaScript で自由に操作できます。</div>
+          </section>
+
+          <section class="card">
+            <h2>2. 要素の取得（セレクター）</h2>
+            <p class="muted">JavaScript で DOM 要素を取得する方法は複数あります。</p>
+
+            <table>
+              <tr>
+                <th>メソッド</th>
+                <th>読み方</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td><code>getElementById()</code></td>
+                <td>ゲット エレメント バイ アイディー</td>
+                <td>ID で要素を取得</td>
+                <td><code>document.getElementById("title");</code></td>
+              </tr>
+              <tr>
+                <td><code>querySelector()</code></td>
+                <td>クエリ セレクター</td>
+                <td>CSS セレクタで取得</td>
+                <td><code>document.querySelector(".box");</code></td>
+              </tr>
+              <tr>
+                <td><code>querySelectorAll()</code></td>
+                <td>クエリ セレクター オール</td>
+                <td>一致するすべての要素を取得</td>
+                <td><code>document.querySelectorAll("p");</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>3. DOM の操作</h2>
+            <p class="muted">内容変更・スタイル変更・追加・削除など、DOM は自由に操作できます。</p>
+
+            <table>
+              <tr>
+                <th>操作</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>内容を変更</td>
+                <td><code>textContent</code> または <code>innerHTML</code> を使う</td>
+                <td><code>title.textContent = "こんにちは";</code></td>
+              </tr>
+              <tr>
+                <td>CSS を変更</td>
+                <td><code>style</code> プロパティを使う</td>
+                <td><code>box.style.color = "red";</code></td>
+              </tr>
+              <tr>
+                <td>要素を追加</td>
+                <td><code>createElement</code> と <code>appendChild</code></td>
+                <td><code>document.body.appendChild(div);</code></td>
+              </tr>
+              <tr>
+                <td>要素を削除</td>
+                <td><code>remove()</code> を使う</td>
+                <td><code>box.remove();</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>4. 使用例</h2>
+            <pre>
+              <code class="code">
+                                         const title = document.getElementById("title"); // 要素取得
+                                         title.textContent = "DOM の学習中";              // 内容変更
+          
+                                         const box = document.createElement("div");      // 要素作成
+                                        box.style.background = "skyblue";               // CSS変更
+                                         document.body.appendChild(box);                 // ページに追加
+          
+                   box.addEventListener("click", () => {
+                   alert("クリックされました！");
+                                         });                                             // イベント追加
+              </code>
+            </pre>
+          </section>
+
+          <section class="card">
+            <h2>5. まとめ</h2>
+            <table>
+              <tr>
+                <th>内容</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>DOM</td>
+                <td>HTML をオブジェクトとして扱う仕組み</td>
+              </tr>
+              <tr>
+                <td>要素取得</td>
+                <td>ID、class、タグなどで取得できる</td>
+              </tr>
+              <tr>
+                <td>DOM 操作</td>
+                <td>内容変更・CSS・追加・削除などが可能</td>
+              </tr>
+              <tr>
+                <td>イベント</td>
+                <td>クリックや入力などの反応をつけられる</td>
+              </tr>
+            </table>
+          </section>
+
+          <footer class="muted" style="margin-top:16px;">
+            📝 このページは JavaScript の <strong>DOM（Document Object Model）</strong> の基礎をまとめたものです。
+            <br>必要であれば、イベント・ノードタイプ・階層構造の図なども追加できます。
+          </footer>
+
+        </div>
+        <div id="Ac-API">
+          <header>
+            <h1>非同期処理（Asynchronous） & API - JavaScript の基本</h1>
+            <div class="muted">非同期処理とは、時間のかかる処理を待たずに他の処理を進める仕組みです。</div>
+          </header>
+
+          <section class="card">
+            <h2>1. 非同期処理とは？</h2>
+            <p class="muted">
+              JavaScript は「シングルスレッド」で動作しますが、<strong>非同期処理</strong> を使うことで
+              時間のかかる操作（通信・タイマー・ファイル読み込みなど）の完了を待たずに、
+              他の処理を同時に進められます。
+            </p>
+
+            <table>
+              <tr>
+                <th>種類</th>
+                <th>読み方</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>Callback</td>
+                <td>コールバック</td>
+                <td>関数を引数として渡し、完了したら実行</td>
+              </tr>
+              <tr>
+                <td>Promise</td>
+                <td>プロミス</td>
+                <td>非同期結果を扱うオブジェクト</td>
+              </tr>
+              <tr>
+                <td>async / await</td>
+                <td>アシンク / アウェイト</td>
+                <td>Promise を簡単に書く文法</td>
+              </tr>
+            </table>
+
+            <div class="note">🔹 現在は <code>async / await</code> がもっとも一般的です。</div>
+          </section>
+
+          <section class="card">
+            <h2>2. APIとは？</h2>
+            <p class="muted">
+              API（エーピーアイ）とは、データを取得したり送信したりするための「外部サービスとの入り口」のことです。
+              JavaScript では <code>fetch()</code> を使って API にアクセスします。
+            </p>
+
+            <table>
+              <tr>
+                <th>用語</th>
+                <th>読み方</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>API</td>
+                <td>エーピーアイ</td>
+                <td>アプリ同士がデータをやり取りする仕組み</td>
+              </tr>
+              <tr>
+                <td>HTTP</td>
+                <td>エイチ ティー ティー ピー</td>
+                <td>Web の通信ルール（GET, POST など）</td>
+              </tr>
+              <tr>
+                <td>Endpoint</td>
+                <td>エンドポイント</td>
+                <td>API を呼び出す URL のこと</td>
+              </tr>
+              <tr>
+                <td>JSON</td>
+                <td>ジェイソン</td>
+                <td>最も一般的なデータ形式</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>3. Promise と async/await の比較</h2>
+
+            <table>
+              <tr>
+                <th>種類</th>
+                <th>説明</th>
+                <th>例</th>
+              </tr>
+              <tr>
+                <td>Promise</td>
+                <td><code>.then()</code> と <code>.catch()</code> を使う</td>
+                <td><code>
+          fetch(url)
+            .then(res =&gt; res.json())
+            .then(data =&gt; console.log(data));
+                </code></td>
+              </tr>
+              <tr>
+                <td>async / await</td>
+                <td>同期処理のように書けて読みやすい</td>
+                <td><code>
+          const data = await fetch(url).then(r =&gt; r.json());
+          console.log(data);
+                </code></td>
+              </tr>
+            </table>
+
+            <div class="note">🔹 新しいコードは <strong>async/await</strong> を使うのが基本です。</div>
+          </section>
+
+          <section class="card">
+            <h2>4. API の使用例（fetch）</h2>
+
+            <pre>
+              <code class="code">
+                // API からデータを取得する例
+                async function getUser() {
+                                                   const url = "https://jsonplaceholder.typicode.com/users/1";
+                                                  const response = await fetch(url);   // データ取得
+                                                   const data = await response.json();  // JSON に変換
+                                                   console.log(data.name);              // データを利用
+}
+getUser();
+              </code>
+            </pre>
+          </section>
+
+          <section class="card">
+            <h2>5. よく使う HTTP メソッド</h2>
+            <table>
+              <tr>
+                <th>メソッド</th>
+                <th>読み方</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>GET</td>
+                <td>ゲット</td>
+                <td>データを取得</td>
+              </tr>
+              <tr>
+                <td>POST</td>
+                <td>ポスト</td>
+                <td>データを新しく作成</td>
+              </tr>
+              <tr>
+                <td>PUT</td>
+                <td>プット</td>
+                <td>既存データを上書き</td>
+              </tr>
+              <tr>
+                <td>DELETE</td>
+                <td>デリート</td>
+                <td>データを削除</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>6. まとめ</h2>
+            <table>
+              <tr>
+                <th>内容</th>
+                <th>説明</th>
+              </tr>
+              <tr>
+                <td>非同期処理</td>
+                <td>時間のかかる処理を待たずに進める</td>
+              </tr>
+              <tr>
+                <td>Promise</td>
+                <td>非同期の結果を扱う仕組み</td>
+              </tr>
+              <tr>
+                <td>async / await</td>
+                <td>非同期処理を簡単に書く文法</td>
+              </tr>
+              <tr>
+                <td>API</td>
+                <td>外部サービスとデータ通信できる</td>
+              </tr>
+              <tr>
+                <td>fetch()</td>
+                <td>JavaScript で API を呼び出す関数</td>
+              </tr>
+            </table>
+          </section>
+
+          <footer class="muted" style="margin-top:16px;">
+            📝 このページは JavaScript の <strong>非同期処理（Asynchronous）</strong> と
+            <strong>API</strong> の基礎をまとめたものです。
+            <br>必要であれば「エラーハンドリング」や「Axios版」なども追加できます。
+          </footer>
+
+        </div>
+        <div id="html">
+          <header>
+            <h1>HTML タグ一覧</h1>
+            <div class="muted">HTML の基本タグを11のカテゴリに分けてまとめました。</div>
+          </header>
+
+          <section class="card">
+            <h2>1. コア構造 (HTML Structure Tags)</h2>
+            <p class="muted">Web ページの基本的な骨組みを作るタグです。</p>
+            <table>
+              <tr>
+                <th>タグ</th>
+                <th>用途</th>
+              </tr>
+              <tr>
+                <td>&lt;!DOCTYPE html&gt;</td>
+                <td>HTML5文書の宣言</td>
+              </tr>
+              <tr>
+                <td>&lt;html&gt;</td>
+                <td>HTML 文書のルート</td>
+              </tr>
+              <tr>
+                <td>&lt;head&gt;</td>
+                <td>メタ情報やスタイル・スクリプトを入れる</td>
+              </tr>
+              <tr>
+                <td>&lt;body&gt;</td>
+                <td>ページの内容（本文）</td>
+              </tr>
+              <tr>
+                <td>&lt;title&gt;</td>
+                <td>ページタイトル</td>
+              </tr>
+              <tr>
+                <td>&lt;meta&gt;</td>
+                <td>文字コードや情報の設定</td>
+              </tr>
+              <tr>
+                <td>&lt;link&gt;</td>
+                <td>外部ファイル（CSSなど）のリンク</td>
+              </tr>
+              <tr>
+                <td>&lt;style&gt;</td>
+                <td>内部CSSの記述</td>
+              </tr>
+              <tr>
+                <td>&lt;script&gt;</td>
+                <td>JavaScriptの記述</td>
+              </tr>
+              <tr>
+                <td>&lt;base&gt;</td>
+                <td>リンクの基準URL設定</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>2. レイアウト / セクションタグ (Layout / Sectioning Tags)</h2>
+            <p class="muted">ページを構造的に分けるためのタグです。</p>
+            <table>
+              <tr>
+                <th>タグ</th>
+                <th>用途</th>
+              </tr>
+              <tr>
+                <td>&lt;header&gt;</td>
+                <td>ヘッダー部分</td>
+              </tr>
+              <tr>
+                <td>&lt;footer&gt;</td>
+                <td>フッター部分</td>
+              </tr>
+              <tr>
+                <td>&lt;nav&gt;</td>
+                <td>ナビゲーションメニュー</td>
+              </tr>
+              <tr>
+                <td>&lt;main&gt;</td>
+                <td>メインコンテンツ</td>
+              </tr>
+              <tr>
+                <td>&lt;section&gt;</td>
+                <td>意味的な区分（セクション）</td>
+              </tr>
+              <tr>
+                <td>&lt;article&gt;</td>
+                <td>記事単位のコンテンツ</td>
+              </tr>
+              <tr>
+                <td>&lt;aside&gt;</td>
+                <td>サイドバーや補足情報</td>
+              </tr>
+              <tr>
+                <td>&lt;div&gt;</td>
+                <td>汎用ブロック</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>3. テキストコンテンツタグ (Text Content Tags)</h2>
+            <p class="muted">文章や文字を扱うタグです。</p>
+            <table>
+              <tr>
+                <th>タグ</th>
+                <th>用途</th>
+              </tr>
+              <tr>
+                <td>&lt;h1&gt;〜&lt;h6&gt;</td>
+                <td>見出し</td>
+              </tr>
+              <tr>
+                <td>&lt;p&gt;</td>
+                <td>段落</td>
+              </tr>
+              <tr>
+                <td>&lt;span&gt;</td>
+                <td>インライン範囲</td>
+              </tr>
+              <tr>
+                <td>&lt;strong&gt;</td>
+                <td>重要な強調</td>
+              </tr>
+              <tr>
+                <td>&lt;b&gt;</td>
+                <td>太字</td>
+              </tr>
+              <tr>
+                <td>&lt;i&gt;</td>
+                <td>斜体</td>
+              </tr>
+              <tr>
+                <td>&lt;em&gt;</td>
+                <td>強調</td>
+              </tr>
+              <tr>
+                <td>&lt;u&gt;</td>
+                <td>下線</td>
+              </tr>
+              <tr>
+                <td>&lt;mark&gt;</td>
+                <td>ハイライト</td>
+              </tr>
+              <tr>
+                <td>&lt;small&gt;</td>
+                <td>小さい文字</td>
+              </tr>
+              <tr>
+                <td>&lt;sub&gt;</td>
+                <td>下付き文字</td>
+              </tr>
+              <tr>
+                <td>&lt;sup&gt;</td>
+                <td>上付き文字</td>
+              </tr>
+              <tr>
+                <td>&lt;pre&gt;</td>
+                <td>整形済みテキスト</td>
+              </tr>
+              <tr>
+                <td>&lt;code&gt;</td>
+                <td>コード表記</td>
+              </tr>
+              <tr>
+                <td>&lt;blockquote&gt;</td>
+                <td>引用文</td>
+              </tr>
+              <tr>
+                <td>&lt;br&gt;</td>
+                <td>改行</td>
+              </tr>
+              <tr>
+                <td>&lt;hr&gt;</td>
+                <td>水平線</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>4. リスト (Lists)</h2>
+            <p class="muted">項目のリストを作るタグです。</p>
+            <table>
+              <tr>
+                <th>タグ</th>
+                <th>用途</th>
+              </tr>
+              <tr>
+                <td>&lt;ul&gt;</td>
+                <td>箇条書きリスト</td>
+              </tr>
+              <tr>
+                <td>&lt;ol&gt;</td>
+                <td>番号付きリスト</td>
+              </tr>
+              <tr>
+                <td>&lt;li&gt;</td>
+                <td>リスト項目</td>
+              </tr>
+              <tr>
+                <td>&lt;dl&gt;</td>
+                <td>定義リスト</td>
+              </tr>
+              <tr>
+                <td>&lt;dt&gt;</td>
+                <td>用語</td>
+              </tr>
+              <tr>
+                <td>&lt;dd&gt;</td>
+                <td>定義内容</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>5. リンク & メディア (Links & Media)</h2>
+            <p class="muted">リンクや画像・音声・動画などを扱うタグです。</p>
+            <table>
+              <tr>
+                <th>タグ</th>
+                <th>用途</th>
+              </tr>
+              <tr>
+                <td>&lt;a&gt;</td>
+                <td>リンク</td>
+              </tr>
+              <tr>
+                <td>&lt;img&gt;</td>
+                <td>画像</td>
+              </tr>
+              <tr>
+                <td>&lt;audio&gt;</td>
+                <td>音声</td>
+              </tr>
+              <tr>
+                <td>&lt;video&gt;</td>
+                <td>動画</td>
+              </tr>
+              <tr>
+                <td>&lt;source&gt;</td>
+                <td>メディアソース指定</td>
+              </tr>
+              <tr>
+                <td>&lt;track&gt;</td>
+                <td>字幕などのトラック</td>
+              </tr>
+              <tr>
+                <td>&lt;picture&gt;</td>
+                <td>レスポンシブ画像</td>
+              </tr>
+              <tr>
+                <td>&lt;figure&gt;</td>
+                <td>図や画像ブロック</td>
+              </tr>
+              <tr>
+                <td>&lt;figcaption&gt;</td>
+                <td>図のキャプション</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>6. テーブル (Tables)</h2>
+            <p class="muted">表を作るタグです。</p>
+            <table>
+              <tr>
+                <th>タグ</th>
+                <th>用途</th>
+              </tr>
+              <tr>
+                <td>&lt;table&gt;</td>
+                <td>表全体</td>
+              </tr>
+              <tr>
+                <td>&lt;thead&gt;</td>
+                <td>ヘッダー</td>
+              </tr>
+              <tr>
+                <td>&lt;tbody&gt;</td>
+                <td>本文</td>
+              </tr>
+              <tr>
+                <td>&lt;tfoot&gt;</td>
+                <td>フッター</td>
+              </tr>
+              <tr>
+                <td>&lt;tr&gt;</td>
+                <td>行</td>
+              </tr>
+              <tr>
+                <td>&lt;th&gt;</td>
+                <td>ヘッダーセル</td>
+              </tr>
+              <tr>
+                <td>&lt;td&gt;</td>
+                <td>セル</td>
+              </tr>
+              <tr>
+                <td>&lt;caption&gt;</td>
+                <td>表のタイトル</td>
+              </tr>
+              <tr>
+                <td>&lt;col&gt;</td>
+                <td>列指定</td>
+              </tr>
+              <tr>
+                <td>&lt;colgroup&gt;</td>
+                <td>列グループ</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>7. フォーム (Forms)</h2>
+            <p class="muted">ユーザー入力を受け取るタグです。</p>
+            <table>
+              <tr>
+                <th>タグ</th>
+                <th>用途</th>
+              </tr>
+              <tr>
+                <td>&lt;form&gt;</td>
+                <td>フォーム全体</td>
+              </tr>
+              <tr>
+                <td>&lt;input&gt;</td>
+                <td>入力欄</td>
+              </tr>
+              <tr>
+                <td>&lt;textarea&gt;</td>
+                <td>複数行入力欄</td>
+              </tr>
+              <tr>
+                <td>&lt;button&gt;</td>
+                <td>ボタン</td>
+              </tr>
+              <tr>
+                <td>&lt;select&gt;</td>
+                <td>選択メニュー</td>
+              </tr>
+              <tr>
+                <td>&lt;option&gt;</td>
+                <td>選択肢</td>
+              </tr>
+              <tr>
+                <td>&lt;label&gt;</td>
+                <td>ラベル</td>
+              </tr>
+              <tr>
+                <td>&lt;fieldset&gt;</td>
+                <td>グループ化</td>
+              </tr>
+              <tr>
+                <td>&lt;legend&gt;</td>
+                <td>グループタイトル</td>
+              </tr>
+              <tr>
+                <td>&lt;datalist&gt;</td>
+                <td>入力候補</td>
+              </tr>
+              <tr>
+                <td>&lt;output&gt;</td>
+                <td>結果表示</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>8. 埋め込みコンテンツ (Embedded Content)</h2>
+            <p class="muted">外部コンテンツを埋め込むタグです。</p>
+            <table>
+              <tr>
+                <th>タグ</th>
+                <th>用途</th>
+              </tr>
+              <tr>
+                <td>&lt;iframe&gt;</td>
+                <td>別ページ埋め込み</td>
+              </tr>
+              <tr>
+                <td>&lt;embed&gt;</td>
+                <td>外部オブジェクト埋め込み</td>
+              </tr>
+              <tr>
+                <td>&lt;object&gt;</td>
+                <td>オブジェクト埋め込み</td>
+              </tr>
+              <tr>
+                <td>&lt;param&gt;</td>
+                <td>objectタグのパラメータ</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>9. インタラクティブ要素 (Interactive Elements)</h2>
+            <table>
+              <tr>
+                <th>タグ</th>
+                <th>用途</th>
+              </tr>
+              <tr>
+                <td>&lt;details&gt;</td>
+                <td>詳細表示ブロック</td>
+              </tr>
+              <tr>
+                <td>&lt;summary&gt;</td>
+                <td>details のタイトル</td>
+              </tr>
+              <tr>
+                <td>&lt;dialog&gt;</td>
+                <td>モーダルダイアログ</td>
+              </tr>
+              <tr>
+                <td>&lt;menu&gt;</td>
+                <td>メニュー</td>
+              </tr>
+              <tr>
+                <td>&lt;menuitem&gt;</td>
+                <td>メニュー項目</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>10. Web Components</h2>
+            <table>
+              <tr>
+                <th>タグ</th>
+                <th>用途</th>
+              </tr>
+              <tr>
+                <td>&lt;template&gt;</td>
+                <td>テンプレート</td>
+              </tr>
+              <tr>
+                <td>&lt;slot&gt;</td>
+                <td>コンテンツ挿入ポイント</td>
+              </tr>
+              <tr>
+                <td>&lt;canvas&gt;</td>
+                <td>描画領域</td>
+              </tr>
+              <tr>
+                <td>&lt;svg&gt;</td>
+                <td>ベクターグラフィック</td>
+              </tr>
+              <tr>
+                <td>&lt;math&gt;</td>
+                <td>数式</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>11. 廃止予定タグ (Deprecated Tags)</h2>
+            <table>
+              <tr>
+                <th>タグ</th>
+                <th>用途</th>
+              </tr>
+              <tr>
+                <td>&lt;center&gt;</td>
+                <td>中央寄せ</td>
+              </tr>
+              <tr>
+                <td>&lt;font&gt;</td>
+                <td>文字スタイル</td>
+              </tr>
+              <tr>
+                <td>&lt;marquee&gt;</td>
+                <td>スクロール文字</td>
+              </tr>
+              <tr>
+                <td>&lt;big&gt;</td>
+                <td>大きい文字</td>
+              </tr>
+              <tr>
+                <td>&lt;small&gt;</td>
+                <td>小さい文字</td>
+              </tr>
+              <tr>
+                <td>&lt;blink&gt;</td>
+                <td>点滅文字</td>
+              </tr>
+              <tr>
+                <td>&lt;tt&gt;</td>
+                <td>等幅文字</td>
+              </tr>
+              <tr>
+                <td>&lt;frameset&gt;</td>
+                <td>フレームセット</td>
+              </tr>
+            </table>
+          </section>
+
+          <footer class="muted" style="margin-top:16px;">
+            📝 このページは HTML タグの一覧をまとめたものです。
+            Web 開発の学習や参照用に便利です。
+          </footer>
+        </div>
+        <div id="css" class="secret">
+          <header>
+            <h1>CSS プロパティ完全一覧</h1>
+            <div class="muted">CSS3/4/5 の基本から応用まで、カテゴリ別にまとめました。</div>
+          </header>
+
+          <!-- 1. テキスト / フォント -->
+          <section class="card">
+            <h2>1. テキスト / フォント (Text / Font)</h2>
+            <table>
+              <tr>
+                <th>プロパティ</th>
+                <th>意味</th>
+                <th>値の例</th>
+              </tr>
+              <tr>
+                <td>direction</td>
+                <td>テキスト方向</td>
+                <td>ltr, rtl</td>
+              </tr>
+              <tr>
+                <td>font-feature-settings</td>
+                <td>OpenType フォント機能</td>
+                <td>'liga' on, 'smcp' off</td>
+              </tr>
+              <tr>
+                <td>font-family</td>
+                <td>フォント指定</td>
+                <td>Arial, "Times New Roman", serif</td>
+              </tr>
+              <tr>
+                <td>font-kerning</td>
+                <td>カーニングの使用</td>
+                <td>auto, normal, none</td>
+              </tr>
+              <tr>
+                <td>font-size</td>
+                <td>文字の大きさ</td>
+                <td>px, em, rem, %, small, medium, large</td>
+              </tr>
+              <tr>
+                <td>font-style</td>
+                <td>文字スタイル</td>
+                <td>normal, italic, oblique</td>
+              </tr>
+              <tr>
+                <td>font-stretch</td>
+                <td>フォントの幅指定</td>
+                <td>ultra-condensed, condensed, normal, expanded</td>
+              </tr>
+              <tr>
+                <td>font-variant-caps</td>
+                <td>大文字の変種</td>
+                <td>normal, small-caps, all-small-caps</td>
+              </tr>
+              <tr>
+                <td>font-variant-east-asian</td>
+                <td>東アジア文字の表示</td>
+                <td>normal, ruby, full-width, proportional-width</td>
+              </tr>
+              <tr>
+                <td>font-variant-ligatures</td>
+                <td>合字の指定</td>
+                <td>normal, none, common-ligatures, discretionary-ligatures</td>
+              </tr>
+              <tr>
+                <td>font-variant-numeric</td>
+                <td>数字のスタイル</td>
+                <td>lining, oldstyle, proportional, tabular</td>
+              </tr>
+              <tr>
+                <td>font-weight</td>
+                <td>文字の太さ</td>
+                <td>normal, bold, 100〜900</td>
+              </tr>
+              <tr>
+                <td>letter-spacing</td>
+                <td>文字間隔</td>
+                <td>normal, 2px, 0.1em</td>
+              </tr>
+              <tr>
+                <td>line-height</td>
+                <td>行の高さ</td>
+                <td>normal, 1.5, 150%</td>
+              </tr>
+              <tr>
+                <td>text-align</td>
+                <td>文字揃え</td>
+                <td>left, right, center, justify</td>
+              </tr>
+              <tr>
+                <td>text-decoration</td>
+                <td>文字装飾</td>
+                <td>none, underline, overline, line-through</td>
+              </tr>
+              <tr>
+                <td>text-decoration-color</td>
+                <td>装飾線の色</td>
+                <td>red, #000, rgba(0,0,0,0.5)</td>
+              </tr>
+              <tr>
+                <td>text-decoration-style</td>
+                <td>装飾線のスタイル</td>
+                <td>solid, dashed, dotted, wavy</td>
+              </tr>
+              <tr>
+                <td>text-decoration-thickness</td>
+                <td>装飾線の太さ</td>
+                <td>1px, 0.1em, auto</td>
+              </tr>
+              <tr>
+                <td>text-emphasis</td>
+                <td>文字強調点 shorthand</td>
+                <td>none, dot, circle, sesame</td>
+              </tr>
+              <tr>
+                <td>text-emphasis-color</td>
+                <td>文字強調点の色</td>
+                <td>red, #000</td>
+              </tr>
+              <tr>
+                <td>text-emphasis-style</td>
+                <td>文字強調点スタイル</td>
+                <td>filled, open</td>
+              </tr>
+              <tr>
+                <td>text-indent</td>
+                <td>段落の最初の字下げ</td>
+                <td>20px, 2em</td>
+              </tr>
+              <tr>
+                <td>text-justify</td>
+                <td>両端揃え時の揃え方</td>
+                <td>auto, inter-word, inter-character</td>
+              </tr>
+              <tr>
+                <td>text-orientation</td>
+                <td>縦書き時の文字方向</td>
+                <td>mixed, upright, sideways</td>
+              </tr>
+              <tr>
+                <td>text-overflow</td>
+                <td>はみ出し時の表示</td>
+                <td>clip, ellipsis</td>
+              </tr>
+              <tr>
+                <td>text-transform</td>
+                <td>文字変換</td>
+                <td>none, uppercase, lowercase, capitalize</td>
+              </tr>
+              <tr>
+                <td>white-space</td>
+                <td>空白文字の扱い</td>
+                <td>normal, nowrap, pre, pre-wrap</td>
+              </tr>
+              <tr>
+                <td>word-break</td>
+                <td>単語折り返し</td>
+                <td>normal, break-word, keep-all</td>
+              </tr>
+              <tr>
+                <td>word-spacing</td>
+                <td>単語間隔</td>
+                <td>normal, 4px</td>
+              </tr>
+              <tr>
+                <td>writing-mode</td>
+                <td>文字の書き方向</td>
+                <td>horizontal-tb, vertical-rl, vertical-lr</td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td>文字色</td>
+                <td>red, #fff, rgba()</td>
+              </tr>
+            </table>
+          </section>
+
+          <!-- 2. ボックス / レイアウト -->
+          <section class="card">
+            <h2>2. ボックス / レイアウト (Box / Layout)</h2>
+            <table>
+              <tr>
+                <th>プロパティ</th>
+                <th>意味</th>
+                <th>値の例</th>
+              </tr>
+              <tr>
+                <td>align-content</td>
+                <td>Flex/Grid 内の複数行揃え</td>
+                <td>start, end, center, space-between</td>
+              </tr>
+              <tr>
+                <td>clear</td>
+                <td>フロート解除</td>
+                <td>none, left, right, both</td>
+              </tr>
+              <tr>
+                <td>clip / clip-path</td>
+                <td>形状の切り抜き</td>
+                <td>circle(), polygon()</td>
+              </tr>
+              <tr>
+                <td>contain</td>
+                <td>要素のレイアウト隔離</td>
+                <td>none, strict, content, size, layout, style, paint</td>
+              </tr>
+              <tr>
+                <td>content-visibility</td>
+                <td>表示最適化</td>
+                <td>visible, auto, hidden</td>
+              </tr>
+              <tr>
+                <td>cursor</td>
+                <td>カーソル形状</td>
+                <td>default, pointer, text</td>
+              </tr>
+              <tr>
+                <td>display</td>
+                <td>表示形式</td>
+                <td>block, inline, flex, grid, none</td>
+              </tr>
+              <tr>
+                <td>float</td>
+                <td>左右寄せ</td>
+                <td>left, right, none</td>
+              </tr>
+              <tr>
+                <td>inset</td>
+                <td>top/right/bottom/left の shorthand</td>
+                <td>10px 20px 10px 20px</td>
+              </tr>
+              <tr>
+                <td>min-block-size / max-block-size</td>
+                <td>ブロック方向の最小・最大高さ</td>
+                <td>100px, auto</td>
+              </tr>
+              <tr>
+                <td>min-height / max-height</td>
+                <td>最小・最大高さ</td>
+                <td>px, %</td>
+              </tr>
+              <tr>
+                <td>min-inline-size / max-inline-size</td>
+                <td>インライン方向の最小・最大幅</td>
+                <td>100px, 50%</td>
+              </tr>
+              <tr>
+                <td>min-width / max-width</td>
+                <td>最小・最大幅</td>
+                <td>px, %</td>
+              </tr>
+              <tr>
+                <td>margin</td>
+                <td>外側余白</td>
+                <td>px, em, %, auto</td>
+              </tr>
+              <tr>
+                <td>object-fit</td>
+                <td>メディア要素のフィット方法</td>
+                <td>fill, contain, cover, scale-down, none</td>
+              </tr>
+              <tr>
+                <td>object-position</td>
+                <td>メディア要素の位置</td>
+                <td>center, top left, 50% 50%</td>
+              </tr>
+              <tr>
+                <td>opacity</td>
+                <td>透明度</td>
+                <td>0〜1</td>
+              </tr>
+              <tr>
+                <td>outline</td>
+                <td>アウトライン</td>
+                <td>none, 1px solid red</td>
+              </tr>
+              <tr>
+                <td>outline-offset</td>
+                <td>アウトラインの位置ずれ</td>
+                <td>2px, -1px</td>
+              </tr>
+              <tr>
+                <td>overflow / overflow-x / overflow-y / scroll-behavior</td>
+                <td>はみ出し・スクロール</td>
+                <td>visible, hidden, scroll, auto, smooth</td>
+              </tr>
+              <tr>
+                <td>overflow-anchor</td>
+                <td>スクロール位置安定化</td>
+                <td>auto, none</td>
+              </tr>
+              <tr>
+                <td>overflow-wrap</td>
+                <td>改行方法</td>
+                <td>normal, break-word, anywhere</td>
+              </tr>
+              <tr>
+                <td>resize</td>
+                <td>要素のサイズ変更</td>
+                <td>none, both, horizontal, vertical</td>
+              </tr>
+              <tr>
+                <td>row-gap / column-gap</td>
+                <td>行間・列間の間隔</td>
+                <td>10px, 1em</td>
+              </tr>
+              <tr>
+                <td>scroll-snap-stop</td>
+                <td>スナップ停止の強制</td>
+                <td>normal, always</td>
+              </tr>
+              <tr>
+                <td>shape-outside</td>
+                <td>テキスト回り込み形状</td>
+                <td>circle(50%), polygon(50% 0, 100% 100%, 0 100%)</td>
+              </tr>
+              <tr>
+                <td>width / height</td>
+                <td>幅・高さ</td>
+                <td>px, %, auto, max-content, min-content</td>
+              </tr>
+              <tr>
+                <td>z-index</td>
+                <td>重なり順</td>
+                <td>auto, 1, 10</td>
+              </tr>
+            </table>
+          </section>
+
+
+          <!-- 3. 背景 / グラデーション / ブレンド -->
+          <section class="card">
+            <h2>3. 背景 / グラデーション / ブレンド (Background / Gradient / Blend)</h2>
+            <table>
+              <tr>
+                <th>プロパティ</th>
+                <th>意味</th>
+                <th>値の例</th>
+              </tr>
+              <tr>
+                <td>backface-visibility</td>
+                <td>3D 変形で裏面表示</td>
+                <td>visible, hidden</td>
+              </tr>
+              <tr>
+                <td>background-attachment</td>
+                <td>固定方法</td>
+                <td>scroll, fixed, local</td>
+              </tr>
+              <tr>
+                <td>background-blend-mode</td>
+                <td>背景画像の合成方法</td>
+                <td>multiply, screen, overlay</td>
+              </tr>
+              <tr>
+                <td>background-clip</td>
+                <td>描画範囲</td>
+                <td>border-box, padding-box, content-box, text</td>
+              </tr>
+              <tr>
+                <td>background-color</td>
+                <td>背景色</td>
+                <td>red, #fff, rgba()</td>
+              </tr>
+              <tr>
+                <td>background-image</td>
+                <td>背景画像</td>
+                <td>url("image.png"), linear-gradient(), radial-gradient()</td>
+              </tr>
+              <tr>
+                <td>background-origin</td>
+                <td>起点</td>
+                <td>border-box, padding-box, content-box</td>
+              </tr>
+              <tr>
+                <td>background-position</td>
+                <td>位置</td>
+                <td>top left, center, 50% 50%</td>
+              </tr>
+              <tr>
+                <td>background-repeat</td>
+                <td>繰り返し</td>
+                <td>repeat, no-repeat, repeat-x, repeat-y</td>
+              </tr>
+              <tr>
+                <td>background-size</td>
+                <td>サイズ</td>
+                <td>auto, cover, contain</td>
+              </tr>
+              <tr>
+                <td>isolation</td>
+                <td>要素の合成境界</td>
+                <td>auto, isolate</td>
+              </tr>
+              <tr>
+                <td>mix-blend-mode</td>
+                <td>要素の合成方法</td>
+                <td>normal, multiply, screen, overlay</td>
+              </tr>
+            </table>
+          </section>
+
+          <!-- 4. Transform / Animation / Transition -->
+          <section class="card">
+            <h2>4. Transform / Animation / Transition</h2>
+            <table>
+              <tr>
+                <th>プロパティ</th>
+                <th>意味</th>
+                <th>値の例</th>
+              </tr>
+              <tr>
+                <td>animation / animation-name / animation-duration / animation-delay / animation-iteration-count /
+                  animation-direction / animation-fill-mode / animation-play-state / animation-timing-function</td>
+                <td>アニメーション</td>
+                <td>slide 2s infinite, bounce 1s ease-in-out</td>
+              </tr>
+              <tr>
+                <td>backdrop-filter</td>
+                <td>背景へのフィルター</td>
+                <td>blur(5px), brightness(0.5)</td>
+              </tr>
+              <tr>
+                <td>filter</td>
+                <td>画像や要素の効果</td>
+                <td>blur(5px), brightness(0.8)</td>
+              </tr>
+              <tr>
+                <td>perspective / perspective-origin</td>
+                <td>3D 視点</td>
+                <td>500px, 50% 50%</td>
+              </tr>
+              <tr>
+                <td>transform</td>
+                <td>変形</td>
+                <td>rotate(45deg), scale(1.5), translateX(50px)</td>
+              </tr>
+              <tr>
+                <td>transform-origin</td>
+                <td>変形基準点</td>
+                <td>center, top left, 50% 50%</td>
+              </tr>
+              <tr>
+                <td>transform-style</td>
+                <td>3D変形の子要素処理</td>
+                <td>flat, preserve-3d</td>
+              </tr>
+              <tr>
+                <td>transition / transition-property / transition-duration / transition-timing-function /
+                  transition-delay</td>
+                <td>変化のアニメーション</td>
+                <td>all 0.3s ease, opacity 1s linear</td>
+              </tr>
+              <tr>
+                <td>will-change</td>
+                <td>パフォーマンス最適化</td>
+                <td>transform, opacity, scroll-position</td>
+              </tr>
+            </table>
+          </section>
+
+
+          <!-- 5. Flex / Grid -->
+          <section class="card">
+            <h2>5. Flex / Grid</h2>
+            <table>
+              <tr>
+                <th>プロパティ</th>
+                <th>意味</th>
+                <th>値の例</th>
+              </tr>
+              <tr>
+                <td>align-items / align-self</td>
+                <td>Flex/Grid 内アイテム揃え</td>
+                <td>start, end, center, stretch</td>
+              </tr>
+              <tr>
+                <td>display</td>
+                <td>Flex/Grid 化</td>
+                <td>flex, inline-flex, grid, inline-grid</td>
+              </tr>
+              <tr>
+                <td>flex-direction / flex-wrap / flex / flex-grow / flex-shrink / flex-basis / order / gap /
+                  justify-content</td>
+                <td>Flexbox 設定</td>
+                <td>row, column, nowrap, wrap, 1 1 auto, center, start, end, stretch</td>
+              </tr>
+              <tr>
+                <td>grid-auto-flow</td>
+                <td>Grid アイテムの自動配置方向</td>
+                <td>row, column, dense</td>
+              </tr>
+              <tr>
+                <td>grid-auto-rows / grid-auto-columns</td>
+                <td>自動行・列サイズ</td>
+                <td>auto, 100px, min-content</td>
+              </tr>
+              <tr>
+                <td>grid-template-areas / grid-template-columns / grid-template-rows / gap / justify-items / align-items
+                  / justify-self / align-self</td>
+                <td>Grid 設定</td>
+                <td>repeat(3, 1fr), "header header" "main sidebar", start, end, center, stretch</td>
+              </tr>
+              <tr>
+                <td>place-items / place-content / place-self</td>
+                <td>Flex/Grid shorthand</td>
+                <td>start, end, center, stretch</td>
+              </tr>
+            </table>
+          </section>
+
+          <!-- 6. List / Table / Counter -->
+          <section class="card">
+            <h2>6. List / Table / Counter</h2>
+            <table>
+              <tr>
+                <th>プロパティ</th>
+                <th>意味</th>
+                <th>値の例</th>
+              </tr>
+              <tr>
+                <td>border-collapse / border-spacing / caption-side / empty-cells</td>
+                <td>テーブルの表示</td>
+                <td>collapse, separate, top, bottom, show, hide</td>
+              </tr>
+              <tr>
+                <td>counter-increment / counter-reset / counter-set</td>
+                <td>カウンター制御・初期化</td>
+                <td>none, step 1, section 1</td>
+              </tr>
+              <tr>
+                <td>list-style / list-style-type / list-style-image / list-style-position</td>
+                <td>リストの表示</td>
+                <td>disc, circle, none, url("bullet.png")</td>
+              </tr>
+              <tr>
+                <td>quotes</td>
+                <td>テキスト引用符の指定</td>
+                <td>none, "“" "”" "‘" "’"</td>
+              </tr>
+            </table>
+          </section>
+
+          <!-- 7. CSS Variables / Custom Properties -->
+          <section class="card">
+            <h2>7. CSS Variables / Custom Properties</h2>
+            <table>
+              <tr>
+                <th>プロパティ</th>
+                <th>意味</th>
+                <th>値の例</th>
+              </tr>
+              <tr>
+                <td>--*</td>
+                <td>変数定義</td>
+                <td>--main-color: red;</td>
+              </tr>
+              <tr>
+                <td>var(--*)</td>
+                <td>変数呼び出し</td>
+                <td>color: var(--main-color);</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>8. ユーザー操作 / インタラクション</h2>
+            <table>
+              <tr>
+                <th>プロパティ</th>
+                <th>意味</th>
+                <th>値の例</th>
+              </tr>
+              <tr>
+                <td>overscroll-behavior</td>
+                <td>スクロールのはみ出し挙動制御</td>
+                <td>auto, contain, none</td>
+              </tr>
+              <tr>
+                <td>pointer-events</td>
+                <td>ポインターイベントの制御</td>
+                <td>auto, none</td>
+              </tr>
+              <tr>
+                <td>tab-size</td>
+                <td>タブ幅</td>
+                <td>4, 8</td>
+              </tr>
+              <tr>
+                <td>touch-action</td>
+                <td>タッチ操作制御</td>
+                <td>auto, pan-x, pan-y, none</td>
+              </tr>
+              <tr>
+                <td>user-select</td>
+                <td>テキスト選択可能か</td>
+                <td>auto, none, text</td>
+              </tr>
+              <tr>
+                <td>will-change</td>
+                <td>パフォーマンス最適化対象</td>
+                <td>transform, opacity, scroll-position</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>9. Scroll / Snap</h2>
+            <table>
+              <tr>
+                <th>プロパティ</th>
+                <th>意味</th>
+                <th>値の例</th>
+              </tr>
+              <tr>
+                <td>scroll-behavior</td>
+                <td>スクロールの滑らかさ</td>
+                <td>auto, smooth</td>
+              </tr>
+              <tr>
+                <td>scroll-margin / scroll-margin-top / scroll-margin-bottom / scroll-margin-left / scroll-margin-right
+                </td>
+                <td>スクロールスナップの余白</td>
+                <td>10px, 1em</td>
+              </tr>
+              <tr>
+                <td>scroll-padding / scroll-padding-left / scroll-padding-right</td>
+                <td>スナップのパディング</td>
+                <td>10px, 1em</td>
+              </tr>
+              <tr>
+                <td>scroll-snap-align</td>
+                <td>スナップ位置</td>
+                <td>start, center, end</td>
+              </tr>
+              <tr>
+                <td>scroll-snap-type</td>
+                <td>スクロールスナップの種類</td>
+                <td>x, y, both, mandatory, proximity</td>
+              </tr>
+            </table>
+          </section>
+          <section class="card">
+            <h2>10. レスポンシブ・条件</h2>
+            <table>
+              <tr>
+                <th>@ルール</th>
+                <th>説明</th>
+                <th>使い方（例）</th>
+              </tr>
+
+              <tr>
+                <td>@media</td>
+                <td>画面サイズやデバイスに応じてCSSを変更</td>
+                <td><code>
+            @media (max-width: 600px) {
+              body { background: red; }
+            }
+            </code></td>
+              </tr>
+
+              <tr>
+                <td>@supports</td>
+                <td>ブラウザがCSSを対応しているか確認</td>
+                <td><code>
+            @supports (display: grid) {
+              .box { display: grid; }
+            }
+            </code></td>
+              </tr>
+
+              <tr>
+                <td>@container</td>
+                <td>親要素のサイズでスタイルを変更</td>
+                <td><code>
+            @container (min-width: 500px) {
+              .card { font-size: 20px; }
+            }
+            </code></td>
+              </tr>
+
+              <tr>
+                <td>@layer</td>
+                <td>CSSの優先順位を管理</td>
+                <td><code>
+            @layer base, theme;
+            
+            @layer base {
+              body { margin: 0; }
+            }
+            </code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>11. ファイル・フォント</h2>
+            <table>
+              <tr>
+                <th>@ルール</th>
+                <th>説明</th>
+                <th>使い方</th>
+              </tr>
+
+              <tr>
+                <td>@import</td>
+                <td>他のCSSファイルを読み込む</td>
+                <td><code>@import "style.css";</code></td>
+              </tr>
+
+              <tr>
+                <td>@font-face</td>
+                <td>フォントを自分で登録</td>
+                <td><code>
+            @font-face {
+              font-family: MyFont;
+              src: url(myfont.woff2);
+            }
+            </code></td>
+              </tr>
+
+              <tr>
+                <td>@font-feature-values</td>
+                <td>フォント機能の設定</td>
+                <td><code>
+            @font-feature-values MyFont {
+              @styleset {
+                nice: 1;
+              }
+            }
+            </code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>12. アニメーション</h2>
+            <table>
+              <tr>
+                <th>@ルール</th>
+                <th>説明</th>
+                <th>使い方</th>
+              </tr>
+
+              <tr>
+                <td>@keyframes</td>
+                <td>アニメーションを定義</td>
+                <td><code>
+            @keyframes move {
+              from { left: 0; }
+              to { left: 100px; }
+            }
+            </code></td>
+              </tr>
+
+              <tr>
+                <td>@property</td>
+                <td>CSS変数に型を付ける</td>
+                <td><code>
+            @property --size {
+              syntax: "<length>";
+              initial-value: 10px;
+              inherits: false;
+            }
+            </code></td>
+              </tr>
+
+              <tr>
+                <td>@scroll-timeline</td>
+                <td>スクロールでアニメーション</td>
+                <td><code>
+            @scroll-timeline myScroll {
+              source: auto;
+            }
+            </code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>13. 印刷・ページ</h2>
+            <table>
+              <tr>
+                <th>@ルール</th>
+                <th>説明</th>
+                <th>使い方</th>
+              </tr>
+
+              <tr>
+                <td>@page</td>
+                <td>印刷時のページ設定</td>
+                <td><code>
+            @page {
+              margin: 2cm;
+            }
+            </code></td>
+              </tr>
+
+              <tr>
+                <td>@margin</td>
+                <td>印刷ページの余白</td>
+                <td><code>
+            @page {
+              @top-left { content: "Title"; }
+            }
+            </code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2>14. その他</h2>
+            <table>
+              <tr>
+                <th>@ルール</th>
+                <th>説明</th>
+                <th>使い方</th>
+              </tr>
+
+              <tr>
+                <td>@counter-style</td>
+                <td>リストの番号を自作</td>
+                <td><code>
+            @counter-style star {
+              system: cyclic;
+              symbols: ★;
+            }
+            </code></td>
+              </tr>
+
+              <tr>
+                <td>@namespace</td>
+                <td>SVGなどの名前空間</td>
+                <td><code>
+            @namespace svg url("http://www.w3.org/2000/svg");
+            </code></td>
+              </tr>
+
+              <tr>
+                <td>@scope</td>
+                <td>CSSの影響範囲を制限</td>
+                <td><code>
+            @scope (.card) {
+              p { color: red; }
+            }
+            </code></td>
+              </tr>
+
+            </table>
+          </section>
+
+          <footer class="muted">
+            📝 このページは CSS プロパティの完全版リストです。学習・参照に便利です。
+          </footer>
+        </div>
+
+      </center>
+    </div>
+    <div id="divA" class="secret">
+      <center>
+        <header>
+          <h1>AnminWebp</h1>
+          <div class="muted ">anminwebpのデーター</div>
+        </header>
+        <section class="card">
+          <h2>
+            webp ID
+          </h2>
+          <h3>gmail : gotk23.090@std.chiba-c.ed.jp</h3>
+          <h3>password : Fyhhmmw5</h3>
+          <h2>
+            email ID
+          </h2>
+          <h3>gmail : gotk23.090@gmail.com</h3>
+          <h3>password : Fyhhmmw5</h3>
+          <a href="projeak.zip" download>projeak.zip</a>
+          <h3>分からない所は、このemailで聞いてください</h3><a href="mailto:catma1920@gmail.com" email>catma1920@gmail.com</a>
+          <h3>github ID は Email ID と同じです</h3>
+        </section>
+      </center>
+    </div>
+    <div id="divB" class="secret">
+      <section class="card">
+        <h3>分からない所は、このemailで聞いてください</h3><a href="mailto:catma1920@gmail.com" email>catma1920@gmail.com</a>
+      </section>
+    </div>
+  </div>
+
+
+
+  <script src="users.js"></script>
+  <script>
+    // ✅ แก้ไข script ให้ทำงานได้จริง
+    const userName = sessionStorage.getItem("userName");
+
+    if (userName) {
+      console.log("ผู้ใช้ล็อกอินแล้ว:", userName);
+      // ปกติไม่ต้องล้าง body ตรงนี้
+    } else {
+      // ถ้ายังไม่ล็อกอิน → กลับไปหน้า login
+      window.location.href = "wold.html";
+    }
+
+    // ระบบเลื่อนหน้า (smooth scroll)
+    const sections = {
+      menu1: "Vb",
+      menu2: "DT",
+      menu3: "Pt",
+      menu4: "CF",
+      menu5: "Fc",
+      menu6: "O",
+      menu7: "A",
+      menu8: "M",
+      menu9: "DOM",
+      menu10: "Ac-API",
+      menu11: "homes",
+      menu12: "html",
+      menu13: "css"
+    };
+
+    Object.keys(sections).forEach(menuId => {
+      document.getElementById(menuId).addEventListener("click", () => {
+        document.getElementById(sections[menuId]).scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    const userId = sessionStorage.getItem("userId");
+
+    if (!userId) {
+      window.location.href = "wold.html";
+    }
+
+    const currentUser = users.find(u => u.id === userId);
+
+    // ซ่อนทุก div
+    document.getElementById("divA").style.display = "none";
+    document.getElementById("divB").style.display = "none";
+
+    // แสดงตามสิทธิ์
+    if (currentUser.access === "A") {
+      document.getElementById("divA").style.display = "block";
+    }
+    if (currentUser.access === "B") {
+      document.getElementById("divB").style.display = "block";
+    }
+  </script>
+</body>
+
+</html>

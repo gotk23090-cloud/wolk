@@ -1,0 +1,162 @@
+@media (min-width:360px) and (max-width:1200px) {
+    body {
+        width: 100vw;
+
+    }
+
+    * {
+        outline: 1px solid black;
+    }
+
+    .m13,
+    .m12 {
+        left: 60vw;
+        width: 10vw;
+        height: 10vw;
+        font-size: 3vw;
+    }
+
+    .m12 {
+        left: 80vw;
+    }
+
+    .m12:hover {
+        left: 75vw;
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+    }
+
+    .m13:hover {
+        left: 55vw;
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+    }
+
+    .secret {
+        width: 95vw;
+        left: 3vw;
+    }
+
+    .wolk {
+        width: 95vw;
+        left: 3vw;
+    }
+
+    .muted {
+        font-size: 2.5vw;
+        width: 90vw;
+    }
+
+    table {
+        width: 90vw;
+    }
+
+    th {
+        font-size: 3vw;
+    }
+
+    td {
+        font-size: 1.8vw;
+    }
+
+    h1 {
+        width: 90vw;
+        font-size: 5vw;
+    }
+
+    h2 {
+        width: 90vw;
+        font-size: 4.5vw;
+    }
+
+    .home:hover {
+        width: 20vw;
+        height: 90vh;
+    }
+
+    .sidebar:hover {
+        width: 20vw;
+        height: 90vh;
+    }
+
+    .m {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .m:hover {
+        animation: buttos 1s 1 forwards;
+    }
+
+    @keyframes buttos {
+        0% {
+            width: 8vw;
+            height: 8vw;
+            border-radius: 50%;
+        }
+
+        50% {
+            width: 10vw;
+            height: 8vw;
+            border-radius: 15px;
+        }
+
+        100% {
+            width: 16vw;
+            height: 10vw;
+            border-radius: 15px;
+        }
+    }
+
+    span {
+        font-size: 3vw;
+    }
+    span:hover {
+        animation: na 1s 1 forwards;
+    }
+    @keyframes na {
+        0% {
+            opacity: 0;
+        }
+
+        30% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+            transform: translateX(-1vw);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0),translateY(-50vw);
+        }
+    }
+    .m1 {
+        width: 17vw;
+        height: 7vw;
+        top: 97vh;
+        left: 75vw;
+    }
+    .m11 {
+        width: 16.5vw;
+        height: 6.5vw;
+        top: 97.3vh;
+        left: 75.5vw;
+    }
+    .m1:hover {
+        width: 18vw;
+        height: 8vw;
+        top: 95vh;
+        left: 76vw;
+    }
+    .m11:hover {
+        width: 17vw;
+        height: 7vw;
+        top: 95.3vh;
+        left: 76.5vw;
+    }
+}

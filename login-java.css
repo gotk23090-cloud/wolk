@@ -1,0 +1,116 @@
+:root {
+    --bg: #0f1724;
+    --card: none;
+    --accent: #38bdf8;
+    --muted: #94a3b8;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+
+header {
+    display: auto;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 24px;
+    width: 95vw;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6);
+    margin-bottom: 16px;
+    width:min(90vw,1100px);
+}
+
+table {
+    width: 50vw;
+    border-collapse: collapse;
+    margin-top: 8px
+}
+
+th,
+td {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px;
+    text-align: left;
+    font-size: 16.3px
+}
+
+th {
+    background: rgba(255, 255, 255, 0.05)
+}
+
+
+.muted {
+    color: var(--muted);
+    font-size: 20px;
+    width: 50vw;
+}
+
+.note {
+    font-size: 14.5px;
+    color: #f52020;
+    background: linear-gradient(90deg, rgba(56, 189, 248, 0.06), transparent);
+    padding: 10px;
+    border-radius: 8px;
+    width: 50vw;
+}
+
+pre{
+  font-size:clamp(14px,1.2vw,20px);
+  width:min(70vw,1000px);
+  background:rgba(255,255,255,0.75);
+  border-radius:8px;
+  overflow:auto;
+}
+
+
+.p1 {
+    width: 70vw;
+}
+
+
+.code,
+.code-1,
+.code-2,
+.code-3 {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    width: 50vw;
+
+}
+tbody,tr,.p1 {
+    width: 50vw;
+}
+
+
+.html {
+    display: none;
+}
+
+#homes,
+#Vb,
+#DT,
+#Pt,
+#CF,
+#Fc,
+#O,
+#A,
+#M,
+#DOM,
+#Ac-API,
+#html,
+#css {
+    min-height: 50vw;
+    height: auto;
+
+}
