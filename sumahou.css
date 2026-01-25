@@ -47,4 +47,8 @@
         left: 0vw;
         font-size: 5vw;
     }
+    .wrapper {
+        left: -15vw;
+    }
+
 }
