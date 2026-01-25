@@ -4,9 +4,6 @@
 
     }
 
-    * {
-        outline: 1px solid black;
-    }
 
     .m13,
     .m12 {
@@ -159,4 +156,5 @@
         top: 95.3vh;
         left: 76.5vw;
     }
+
 }
