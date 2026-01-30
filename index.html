@@ -41,16 +41,16 @@
       const messageDiv = document.getElementById("message");
 
       if (!email || !password) {
-        messageDiv.textContent = "กรุณากรอก Email และ Password ให้ครบ";
+        messageDiv.textContent = "EmailとPasswordを書いてください";
         return;
       }
 
       const user = users.find(u => u.email === email);
 
       if (!user) {
-        messageDiv.textContent = "ไม่พบ Email ในระบบ";
+        messageDiv.textContent = "このEmailはないです";
       } else if (user.password !== password) {
-        messageDiv.textContent = "รหัสผ่านไม่ถูกต้อง";
+        messageDiv.textContent = "パスワードはあってないです";
       } else {
         sessionStorage.setItem("userId", user.id);
         sessionStorage.setItem("userName", user.name);
@@ -61,3 +61,4 @@
 </body>
 
 </html>
+
